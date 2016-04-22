@@ -1,0 +1,206 @@
+/**!
+ * delivery.controller
+ * @author jianglj
+ * @create 2016-04-18 10:58
+ */
+(function () {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .controller('product.publish.DeliveryController', DeliveryController);
+
+    DeliveryController.$inject = [
+        '$timeout',
+        '$state',
+        '$scope',
+        'product.publish.publishService',
+        'comp.util.arrayUtil'
+    ];
+    function DeliveryController($timeout, $state, $scope, publishService, arrayUtil) {
+        var vm = this;
+        vm.rest = {};
+        vm.filterList = [];
+        vm.product = $scope.form.product = {
+            purchaseProducts: [],
+            info: [],
+            specifications: [],
+            properties: [],
+            parameters: [],
+            pics: [],
+            detailDesc: ''
+        };
+        _init();
+
+        function _init() {
+            vm.relate_num_select = [
+                {name: '1', id: '1'},
+                {name: '2', id: '2'},
+                {name: '3', id: '3'},
+                {name: '4', id: '4'},
+                {name: '5', id: '5'},
+                {name: '6', id: '6'},
+                {name: '7', id: '7'},
+                {name: '8', id: '8'},
+                {name: '9', id: '9'},
+                {name: '10', id: '10'}
+            ];
+            vm.relate_num = vm.relate_num_select[0].id;
+            vm.filterBySelect = [
+                {name: '按商品名称查询', id: 'name'},
+                {name: '按采购SKU号查询', id: 'SKU'}
+            ];
+            vm.filterBy = vm.filterBySelect[0].id;
+            vm._doType = _doType;
+            vm._doSelect = _doSelect;
+            vm._relateProduct = _relateProduct;
+            vm._loadProductInfo = _loadProductInfo;
+            vm._selectProduct = _selectProduct;
+            vm._unlinkProduct = _unlinkProduct;
+            vm._addEmptySpecification = _addEmptySpecification;
+            vm._removeSpecification = _removeSpecification;
+            vm._addEmptyParameters = _addEmptyParameters;
+            vm._removeParameters = _removeParameters;
+            vm.isLoadInfo = false;
+
+            _relateProduct(1);
+
+            function _relateProduct(repeat) {
+                $scope.form.product.purchaseProducts = [];
+                for (var i = 0; i < repeat; i++) {
+                    var products = $scope.form.product.purchaseProducts;
+                    var relateProduct = new RelateProduct([], [], 0, 0, products.length);
+                    products.push(relateProduct);
+                    vm.filterList[i] = {
+                        codes: [],
+                        list: []
+                    };
+                }
+
+                function RelateProduct(linkProducts, ppIds, nums, isMain, grpNo) {
+                    this.linkProducts = linkProducts;
+                    this.ppIds = ppIds;
+                    this.nums = nums;
+                    this.isMain = isMain;
+                    this.grpNo = grpNo;
+                }
+            }
+
+            function _selectProduct($event, item) {
+                var $this = $($event.target);
+                publishService.getSingleProduct({
+                        method: 'GET',
+                        url: 'app/business/product/publish/service/single.json',
+                    })
+                    .then(function (response) {
+                        var product = response.data;
+                        if ($.inArray(product.pprId, item.ppIds) < 0) {
+                            item.linkProducts.push(product);
+                            item.ppIds.push(product.pprId);
+                        }
+                    }, function (errResponse) {
+                        console.log(errResponse);
+                    })
+            }
+
+            function _loadProductInfo($event, item) {
+                if (!item.ppIds.length) {
+                    alert('请先关联数据!');
+                    item.isMain = 0;
+                    return;
+                }
+                publishService.getProductInfo({
+                        method: 'GET',
+                        url: 'app/business/product/publish/service/specifications.json',
+                    })
+                    .then(function (response) {
+                        vm.rest.productInfo = response.data;
+                        vm.rest.productInfo.classes.attributes = arrayUtil.groupArray(vm.rest.productInfo.classes.attributes, 3);
+                        vm.isLoadInfo = true;
+                    }, function (errResponse) {
+                        console.log(errResponse);
+                    })
+            }
+
+            function _unlinkProduct($event, item, linkProduct) {
+                item.ppIds = _.without(item.ppIds, linkProduct.pprId);
+                item.linkProducts = _.without(item.linkProducts, linkProduct);
+            }
+
+            function _addEmptySpecification(items) {
+                items.values.push({
+                    pvid: 0,
+                    name: ''
+                })
+            }
+
+            function _removeSpecification(items, index) {
+                items.splice(index, 1);
+            }
+
+            function _addEmptyParameters(items) {
+                items.push({
+                    "ppid": 0,
+                    "name": "",
+                    "multiSelect": "1",
+                    "showName": "测试测试",
+                    "values": [
+                        {
+                            "pvid": 0,
+                            "name": ""
+                        }
+                    ]
+                })
+            }
+
+            function _removeParameters(items, index) {
+                items.splice(index, 1);
+            }
+
+            function _doType(search) {
+                var selectId = this.attrs.id,
+                    isFilterByName = selectId.indexOf('name') > 0,
+                    id = selectId.charAt(selectId.length - 1),
+                    params = {};
+
+                vm.filterList[id].list = [];
+                if(isFilterByName){
+                    params.name = search;
+                }else{
+                    if(search.length <= 16){
+                        return;
+                    }
+                    params.sku = search;
+                }
+                params.baCode = 'A001';
+                publishService.filterByName('/merchant/purchase-products/list', null, params)
+                    .then(
+                        function (response) {
+                            var data = response.data;
+                            for(var i= 0; i< data.length; i++){
+                                vm.filterList[id].list.push(data[i].name);
+                                vm.filterList[id].codes.push(data[i].pprId);
+                            }
+                        },
+                        function (errResponse) {
+                            console.log(errResponse.data.message);
+                        }
+                    );
+            }
+
+            function _doSelect(name){
+                var selectId = this.attrs.id,
+                    id = selectId.charAt(selectId.length - 1),
+                    index;
+                for(var i= 0; i< vm.filterList[id].list.length; i++){
+                    if(vm.filterList[id].list[i] === name){
+                        index = i;
+                        break;
+                    }
+                }
+                console.log(vm.filterList[id].codes[i]);
+            }
+        }
+    }
+
+})();

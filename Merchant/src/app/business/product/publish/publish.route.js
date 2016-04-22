@@ -1,0 +1,35 @@
+/**!
+ * publish.route.js
+ * @author jianglj
+ * @create 2016-04-15 13:22
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .config(routerConfig);
+
+    routerConfig.$inject = [
+        '$stateProvider'
+    ];
+    function routerConfig($stateProvider) {
+
+        var basePath = 'app/business/product/publish/';
+        var baseState = 'xcore.product_publish.';
+        var basePackage = 'product.publish.';
+
+        $stateProvider
+            .state(baseState + 'delivery', {
+                templateUrl: basePath + 'view/delivery.html',
+                controller: basePackage + 'DeliveryController',
+                controllerAs: 'vm'
+            })
+            .state(baseState + 'not_delivery', {
+                templateUrl: basePath + 'view/not-delivery.html',
+                controller: basePackage + 'NotDeliveryController'
+            });
+    }
+
+})();
+

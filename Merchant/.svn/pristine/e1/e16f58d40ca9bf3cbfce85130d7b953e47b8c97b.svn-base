@@ -1,0 +1,57 @@
+<!--修改密码-->
+<div class="panel">
+    <div class="mainpanel whitebg">
+        <!--面包屑-->
+        <h3 class="bread-crumbs">修改密码</h3>
+
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="password1" class="control-label">原密码:</label>
+                <input
+                        ng-model="main.passwordModification.originPassword"
+                        type="password"
+                        class="form-control"
+                        pattern="^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]+$"
+                        parsley-trigger="change"
+                        required
+                />
+                <input type="password" class="form-control"
+                                                                                 id="password1"> <i
+                    class="zzticon icon-s success"></i>
+            </div>
+            <div class="form-group">
+                <label for="password2" class="control-label">新密码:</label>
+                <input
+                        ng-model="main.passwordModification.newPassword"
+                        type="password"
+                        class="form-control"
+                        pattern="^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]+$"
+                        parsley-trigger="change"
+                        required
+                /><i
+                    class="zzticon icon-s wrong"></i> <span class="red">密码不能为空并且长度最小为6位</span>
+            </div>
+            <div class="form-group">
+                <label for="password3" class="control-label">新密码确认:</label>  <input
+                    ng-model="main.passwordModification.retypeNewPassword"
+                    type="password"
+                    class="form-control"
+                    pattern="^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]+$"
+                    parsley-trigger="change"
+                    placeholder="由数字字母及特殊字符(~!@#$%^&*.)组成"
+                    required
+            /> <i
+                    class="zzticon icon-s wrong"></i> <span class="red">两次密码不一致</span>
+            </div>
+            <div class="form-group">
+                <label for="password3" class="control-label"></label>
+                <button type="button" data-ng-disabled="xhrProcessing" data-ng-click="main.modifyPassword()" class="btn btn-success">修 改</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-default" >取 消</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!--右侧内容部分end-->

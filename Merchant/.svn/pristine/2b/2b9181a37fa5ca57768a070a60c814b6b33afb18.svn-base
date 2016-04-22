@@ -1,0 +1,17 @@
+(function() {
+
+  'use strict';
+
+  angular
+    .module('xcore')
+    .constant('settings', {
+
+      backend: {
+        system: /*system*/'http://10.2.9.36:8088'/*system*/,
+        product: /*product*/'http://10.2.9.36:8888'/*product*/
+      }
+
+    });
+
+
+})();

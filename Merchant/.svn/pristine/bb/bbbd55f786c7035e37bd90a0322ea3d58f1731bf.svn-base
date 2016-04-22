@@ -1,0 +1,20 @@
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <xc-main-side-bar></xc-main-side-bar>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+</div>

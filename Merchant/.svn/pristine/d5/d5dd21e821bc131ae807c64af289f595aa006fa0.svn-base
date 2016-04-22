@@ -1,0 +1,116 @@
+/**!
+ * delivery.controller
+ * @author jianglj
+ * @create 2016-04-18 10:58
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .controller('product.publish.DeliveryController', DeliveryController);
+
+    DeliveryController.$inject = [
+        '$timeout',
+        '$state',
+        '$scope',
+        'product.publish.publishService',
+        'comp.util.arrayUtil'
+    ];
+    function DeliveryController($timeout, $state, $scope, publishService, arrayUtil) {
+        var vm = this;
+        vm.rest = {};
+        vm.product = $scope.form.product = {
+            purchaseProducts: [],
+            info: [],
+            specifications: [],
+            properties: [],
+            parameters: [],
+            pics: [],
+            detailDesc: ''
+        };
+        _init();
+
+        function _init(){
+            vm.relate_num_select = [
+                {name:'1',id:'1'},
+                {name:'2',id:'2'},
+                {name:'3',id:'3'},
+                {name:'4',id:'4'},
+                {name:'5',id:'5'},
+                {name:'6',id:'6'},
+                {name:'7',id:'7'},
+                {name:'8',id:'8'},
+                {name:'9',id:'9'},
+                {name:'10',id:'10'}
+            ];
+            vm.relate_num = vm.relate_num_select[0].id,
+                vm._relateProduct = _relateProduct;
+                vm._loadProductInfo = _loadProductInfo;
+                vm._selectProduct = _selectProduct;
+                vm._unlinkProduct = _unlinkProduct;
+                vm.isLoadInfo = false;
+            
+            _relateProduct(1);
+
+            function _relateProduct(repeat){
+                $scope.form.product.purchaseProducts = [];
+                for(var i= 0; i< repeat; i++){
+                    var products = $scope.form.product.purchaseProducts;
+                    var relateProduct = new RelateProduct([], [], 0, 0, products.length);
+                    products.push(relateProduct);
+                }
+
+                function RelateProduct(linkProducts, ppIds, nums, isMain, grpNo){
+                    this.linkProducts = linkProducts;
+                    this.ppIds = ppIds;
+                    this.nums = nums;
+                    this.isMain = isMain;
+                    this.grpNo = grpNo;
+                }
+            }
+
+            function _selectProduct($event, item){
+                var $this = $($event.target);
+                publishService.getSingleProduct({
+                        method: 'GET',
+                        url: 'app/business/product/publish/service/single.json',
+                    })
+                    .then(function (response) {
+                        var product = response.data;
+                        if($.inArray( product.pprId, item.ppIds ) < 0){
+                            item.linkProducts.push(product);
+                            item.ppIds.push(product.pprId);
+                        }
+                    }, function (errResponse) {
+                        console.log(errResponse);
+                    })
+            }
+
+            function _loadProductInfo($event, item){
+                if(!item.ppIds.length){
+                    alert('请先关联数据!');
+                    item.isMain = 0;
+                    return;
+                }
+                publishService.getProductInfo({
+                        method: 'GET',
+                        url: 'app/business/product/publish/service/specifications.json',
+                    })
+                    .then(function (response) {
+                        vm.rest.productInfo = response.data;
+                        vm.rest.productInfo.classes.attributes = arrayUtil.groupArray(vm.rest.productInfo.classes.attributes, 3);
+                        vm.isLoadInfo = true;
+                    }, function (errResponse) {
+                        console.log(errResponse);
+                    })
+            }
+
+            function _unlinkProduct($event, item, linkProduct){
+                item.ppIds = _.without(item.ppIds, linkProduct.pprId);
+                item.linkProducts = _.without(item.linkProducts, linkProduct);
+            }
+        }
+    }
+
+})();

@@ -1,0 +1,30 @@
+/**!
+ * main.controller.js
+ * @author jianglj
+ * @create 2016-04-15 15:20
+ */
+(function(){
+
+    angular
+        .module('xcore.main')
+        .controller('main.MainController', MainController);
+
+    MainController.$inject = [
+        '$log',
+        '$window',
+        '$scope',
+        '$state'
+    ];
+
+    function MainController($log, $window, $scope, $state) {
+        var vm = this;
+
+        $state.go('xcore.product_publish');
+        $scope.users = [
+            {name:'a',id:'1'},
+            {name:'b',id:'2'},
+            {name:'c',id:'3'}
+        ];
+        $scope.selected=$scope.users[0].id;//如果想要第一个值
+    }
+})();

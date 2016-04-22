@@ -1,0 +1,11 @@
+/**!
+ * xcore.comp
+ * @author jianglj
+ * @create 2016-04-15 13:29
+ */
+(function() {
+    'use strict';
+
+    angular.module('xcore.comp', ['xcore']);
+
+})();

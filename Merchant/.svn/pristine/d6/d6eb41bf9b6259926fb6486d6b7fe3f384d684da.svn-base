@@ -1,0 +1,47 @@
+/**!
+ * specification-add-tab-directive
+ * @author jianglj
+ * @create 2016-04-19 13:56
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .directive('xcSpecificationsTabsControl', specificationsTabsControl);
+
+
+    specificationsTabsControl.$inject = [
+
+    ];
+    function specificationsTabsControl() {
+
+        return {
+            restrict: 'AE',
+            link: linkFunc
+        };
+
+        function linkFunc(scope, element, attrs) {
+           var template = '<span class="j_add-item">' +
+                               '<input type="radio" name="7" class="table-check"> ' +
+                               '<input type="text" class="size-fillin"> ' +
+                               '<a href="javascript:void(0)" class="x">X</a>' +
+                           '</span>',
+               $element = $(element);
+
+            $element.on('click', '.add', function(){
+                var $this = $(this);
+                $this.before(template);
+            })
+
+            $element.on('click', '.x', function(){
+                var $this = $(this);
+                $this.parents('.j_add-item').eq(0).remove();
+            })
+
+        }
+
+
+    }
+
+})();

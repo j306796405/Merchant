@@ -1,0 +1,17 @@
+<div class="xc_pagination_stat">共 {{ pagination.totalItems }} 条记录</div>
+<div class="xc_pagination_bar">
+  <ul class="pagination" ng-show="pagination.totalItems > 0">
+    <li ng-class="{disabled: pagination.currentPage == 1, processing: xhrProcessing}" ng-click="startPage()"><span>&lt;&lt;</span></li>
+    <li ng-class="{disabled: pagination.currentPage == 1, processing: xhrProcessing}" ng-click="prevPage()"><span>&lt;</span></li>
+    <li ng-repeat="item in pageList track by $index"
+        ng-class="{active: item == pagination.currentPage, processing: xhrProcessing}"
+        ng-click="changeCurrentPage(item)">
+      <span>{{ item }}</span>
+    </li>
+    <li ng-class="{disabled: pagination.currentPage == pagination.numberOfPages, processing: xhrProcessing}" ng-click="nextPage()">
+      <span>&gt;</span></li>
+    <li ng-class="{disabled: pagination.currentPage == pagination.numberOfPages, processing: xhrProcessing}" ng-click="endPage()">
+      <span>&gt;&gt;</span></li>
+  </ul>
+  <div class="no-items" ng-show="pagination.totalItems <= 0">暂无数据</div>
+</div>

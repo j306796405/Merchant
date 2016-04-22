@@ -1,0 +1,26 @@
+<div class="related-pro">
+    <div ng-transclude></div>
+    <input type="text" class="related-input mr5">
+    <button type="button" class="btn btn-primary btn-sm J_relatedBtn">关联</button>
+    <span class="hint">（请从查询列表中选中需要关联的采购商品，再点击关联按钮进行关联）</span>
+    <p class="reduce">
+        <label class="select-label"><em class="star">*</em>库存扣减数量：<input type="text" class="J_nums"></label>
+    </p>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th class="channel-name">采购商品名称</th>
+            <th>采购商品ID</th>
+            <th>仓库</th>
+            <th>采购价</th>
+            <th>剩余库存</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <label class="check-label">
+        <input type="radio" class="table-check check-element mr5 J_isMain" name="isMain">
+        选择此采购商品的分类作为销售分类
+    </label>
+</div>

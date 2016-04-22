@@ -1,0 +1,75 @@
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <xc-main-side-bar></xc-main-side-bar>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <h1 class="channel-title">
+                    <b>发布销售商品</b><a href="商品审核记录.html">商品审核记录</a><span>
+    <button class="btn btn-primary mr5" type="button">保存商品
+    </button>
+    <button class="btn btn-success mr5" type="button">预览
+    </button>
+    <button class="btn btn-info" type="button">复制商品</button></span>
+                </h1>
+
+                <div class="panel">
+                    <div class="panel-heading navy-blue">
+                        <ul class="tabnav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="javascript:">商品基础信息</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="javascript:">商品价格/库存/渠道</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="panel-body whitebg pd20">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="enter-wrapper">
+                                    <h1 class="review-title">商品是否已入喆兔仓？<span class="hint">（商品保存后将无法修改是否入仓选项）<em class="star">*</em></span></h1>
+                                    <input type="radio" disabled="disabled" id="yes" class="table-check check-element mr5" name="enter"><label class="disabled check-label mr15" for="yes">是</label><input type="radio" class="table-check check-element mr5" id="no" name="enter" disabled="disabled"><label for="no" class="disabled check-label mr15">否</label>
+                                </div>
+
+                                <div class="enter-wrapper">
+                                    <h1 class="review-title">关联采购商品</h1>
+                                    <div xc-relate-product>
+                                        <div class="mb10">
+                                            <label class="select-label"><em class="star">*</em>请选择关联商品数量：</label>
+                                            <select ng-model="selected" ng-options="x.id as x.name for x in users"></select>
+                                            <select class="select-tab mr5" ng-model="relateNum">
+                                                <option value="" selected hidden></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                            <button type="button" class="btn btn-primary btn-sm" ng-click="_relateProduct(relateNum)">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

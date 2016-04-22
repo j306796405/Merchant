@@ -1,0 +1,8 @@
+<h1 class="channel-title">
+    <b>发布销售商品</b><a href="商品审核记录.html">商品审核记录</a><span>
+    <button class="btn btn-primary mr5" type="button">保存商品
+</button>
+    <button class="btn btn-success mr5" type="button">预览
+</button>
+    <button class="btn btn-info" type="button">复制商品</button></span>
+</h1>

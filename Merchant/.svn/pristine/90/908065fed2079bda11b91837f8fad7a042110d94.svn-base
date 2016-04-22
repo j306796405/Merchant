@@ -1,0 +1,33 @@
+/**!
+ * publish.service.js
+ * @author jianglj
+ * @create 2016-04-19 09:49
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .factory('product.publish.publishService', publishService);
+    publishService.$inject = [
+        '$log',
+        '$http',
+        '$q'
+    ];
+    function publishService($log, $http, $q) {
+
+        return {
+            getProductInfo: getProductInfo,
+            getSingleProduct: getSingleProduct
+        };
+
+        function getProductInfo(req){
+            return $http(req);
+        }
+        
+        function getSingleProduct(req){
+            return $http(req);
+        }
+    }
+
+})();

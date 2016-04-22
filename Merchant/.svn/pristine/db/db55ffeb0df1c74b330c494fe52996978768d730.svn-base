@@ -1,0 +1,37 @@
+/**!
+ * main.route
+ * @author
+ * @create 2016-04-17 14:01
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.main')
+        .config(routerConfig);
+
+    routerConfig.$inject = [
+        '$stateProvider',
+        '$urlRouterProvider'
+    ];
+    function routerConfig($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+            .state('xcore', {
+                url: '/',
+                templateUrl: 'app/main/view/main.html',
+                controller: 'main.MainController',
+                controllerAs: 'main'
+            })
+            .state('xcore._blank', {
+                template: '<div></div>'
+            });
+
+        $stateProvider
+            .state('xcore.product_publish', {
+                templateUrl: 'app/business/product/publish/view/main.html'
+            });
+
+    }
+
+})();

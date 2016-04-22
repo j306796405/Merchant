@@ -1,0 +1,43 @@
+<div data-ng-controller="product.publish.MainController as vm">
+    <h1 class="channel-title">
+        <b>发布销售商品</b><a href="商品审核记录.html">商品审核记录</a><span>
+    <button class="btn btn-primary mr5" type="button" data-ng-click="vm.save()">保存商品
+</button>
+    <button class="btn btn-success mr5" type="button">预览
+</button>
+    <button class="btn btn-info" type="button">复制商品</button></span>
+    </h1>
+
+    <div class="panel">
+        <div class="panel-heading navy-blue">
+            <ul class="tabnav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab" href="javascript:">商品基础信息</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="javascript:">商品价格/库存/渠道</a>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-body whitebg pd20">
+            <div class="tab-content">
+                <div class="tab-pane active">
+                    <div class="enter-wrapper">
+                        <h1 class="review-title">商品是否已入喆兔仓？
+                            <span class="hint">（商品保存后将无法修改是否入仓选项）<em class="star">*</em></span>
+                        </h1>
+                        <label class="check-label mr15" for="yes">
+                            <input type="radio" id="yes" class="table-check check-element mr5" name="isWarehouse" value="1" ng-click="vm.isDelivery()">
+                            是
+                        </label>
+                        <label for="no" class="check-label mr15">
+                            <input type="radio" class="table-check check-element mr5" id="no" name="isWarehouse" value="0" ng-click="vm.isDelivery()">
+                            否
+                        </label>
+                    </div>
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

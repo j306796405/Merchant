@@ -1,0 +1,159 @@
+<div class="enter-wrapper">
+
+    <h1 class="review-title">关联采购商品</h1>
+    <div>
+        <div class="mb15">
+            <label class="select-label"><em class="star">*</em>请选择关联商品数量：</label>
+            <select class="select-tab mr5" ng-model="vm.relate_num" ng-options="x.id as x.name for x in vm.relate_num_select"></select>
+            <button type="button" class="btn btn-primary btn-sm" data-ng-click="vm._relateProduct(vm.relate_num)">确定</button>
+        </div>
+    </div>
+    <div class="related-pro">
+        <ul>
+            <li ng-repeat="item in form.product.purchaseProducts" class="mb30 J_purchaseProduct">
+                <select class="select-tab mr5">
+                    <option value="按商品名称查询">按商品名称查询</option>
+                    <option value="按采购SKU号查询">按采购SKU号查询</option>
+                </select>
+                <input type="text" class="related-input mr5" data-ng-model="item.filter">
+                <button type="button" class="btn btn-primary btn-sm J_relate-product" data-ng-click="vm._selectProduct($event, item)">关联</button>
+                <span class="hint">（请从查询列表中选中需要关联的采购商品，再点击关联按钮进行关联）</span>
+                <p class="reduce">
+                    <label class="select-label"><em class="star">*</em>库存扣减数量：<input type="text" data-ng-model="item.nums"></label>
+                </p>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="channel-name">采购商品名称</th>
+                        <th>采购商品ID</th>
+                        <th>仓库</th>
+                        <th>采购价</th>
+                        <th>剩余库存</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-ng-repeat="linkProduct in item.linkProducts">
+                            <td class="channel-name red">{{linkProduct.name}}</td>
+                            <td>{{linkProduct.pprId}}</td>
+                            <td>{{linkProduct.warehouse}}</td>
+                            <td>{{linkProduct.buyPrice}}</td>
+                            <td>{{linkProduct.inventory}}</td>
+                            <td><a href="javascript:;" class="btn btn-warning btn-sm J_unlink_btn" data-ng-click="vm._unlinkProduct($event, item, linkProduct)">取消关联</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label class="check-label">
+                    <input type="radio" class="table-check check-element mr5" name="isMain" data-ng-model="item.isMain" ng-value="1" ng-change="vm._loadProductInfo($event, item)">
+                    选择此采购商品的分类作为销售分类
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div ng-if="vm.isLoadInfo">
+    <div class="enter-wrapper">
+        <h1 class="review-title">商品基本信息</h1>
+        <form class="pro-msg">
+            <p class="mt20">
+                <label>商品分类：</label>
+                {{vm.rest.productInfo.classes.upperName}} > {{vm.rest.productInfo.classes.parentName}} > {{vm.rest.productInfo.classes.name}}
+            </p>
+            <p class="mt20">
+                <label>品牌名称：</label>
+                {{vm.rest.productInfo.brand.brandName}}
+            </p>
+            <p class="mt20">
+                <label>商品名称：</label>
+                <input type="text" data-ng-model="form.product.info.info">
+            </p>
+
+            <p class="mt20">
+                <label for="desc" class="desc-label">商品卖点：</label>
+                <textarea id="desc" data-ng-model="form.product.info.summary"></textarea>
+            </p>
+        </form>
+    </div>
+
+    <div class="enter-wrapper">
+        <h1 class="review-title">商品规格</h1>
+        <div class="J_specifications_checkbox_wrap">
+                <span class="J_specifications_checkbox_item" data-ng-repeat="item in vm.rest.productInfo.classes.specifications">
+                    <label class="check-label mr20">
+                        <input type="checkbox" class="table-check check-element mr5" xc-specifications-show-tabs>
+                        {{item.name}}
+                    </label>
+                </span>
+        </div>
+        <ul>
+            <li class="J_productStandardItem hidden" data-ng-repeat="item in vm.rest.productInfo.classes.specifications"  xc-specifications-tabs-control>
+                <span class="f12 format-title">{{item.name}}</span>
+                <div class="format mt10 clearfix">
+                        <span data-ng-repeat="info in item.values">
+                            <label>
+                                <input type="radio" name="{{'ppid-' + item.ppid}}" class="table-check check-element">
+                                 {{info.name}}
+                            </label>
+                        </span>
+                    <em class="add">
+                        <a class="btn btn-success btn-sm" href="javascript:;">+添加</a>
+                    </em>
+                </div>
+            </li>
+        </ul>
+        <p class="hint">（创建商品时一次只能创建一种规格，如需创建多种规格请使用复制商品功能。如：某衣服有红色S码、红色L码、黄色S码、黄色L码
+            四种规格，需先创建其中一种规格，如红色S码，然后再使用复制功能创建其它三种规格。）</p>
+    </div>
+    <div class="enter-wrapper">
+        <h1 class="review-title">商品属性</h1>
+        <div class="pro-property-wrap">
+            <ul class="pro-property-box clearfix" data-ng-repeat="attribute in vm.rest.productInfo.classes.attributes">
+                <li data-ng-repeat="item in attribute">
+                    <!-- 0:单选 1:输入  2:多选 -->
+                    <span data-ng-if="item.multiSelect == 0">
+                        <label class="key">{{item.name}}：</label>
+                        <select class="form-ele">
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                        </select>
+                    </span>
+                    <span data-ng-if="item.multiSelect == 1">
+                        <label class="key"><em class="star">*</em>{{item.name}}：</label>
+                        <input type="text" class="form-ele input">
+                    </span>
+                    <span data-ng-if="item.multiSelect == 2">
+                        <label class="key">{{item.name}}：</label>
+                        <span class="checkgroup">
+                            <label>
+                                <input type="checkbox" class="table-check">
+                                休闲
+                            </label>
+                        </span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="enter-wrapper" xc-parameters-add>
+        <h1 class="review-title">商品参数
+            <a href="javascript:void(0)" class="parameter-btn">自定义参数</a>
+        </h1>
+        <div class="J_product-param">
+            <span class="custom" data-ng-repeat="parameter in vm.rest.productInfo.classes.parameters">
+                <label>{{parameter.name}}：</label>
+                <input type="text" data-ng-model="parameter.values[0].name">
+            </span>
+        </div>
+    </div>
+
+    <div class="enter-wrapper">
+        <h1 class="review-title">商品详情</h1>
+        <div class="editor">
+
+        </div>
+    </div>
+
+</div>

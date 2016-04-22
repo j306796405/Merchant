@@ -1,0 +1,44 @@
+/**!
+ * publish.service.js
+ * @author jianglj
+ * @create 2016-04-19 09:49
+ */
+(function () {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .factory('product.publish.publishService', publishService);
+    publishService.$inject = [
+        '$log',
+        '$http',
+        '$q',
+        'comp.rest.restAccessor'
+    ];
+    function publishService($log, $http, $q, restAccessor) {
+
+        return {
+            getProductInfo: getProductInfo,
+            getSingleProduct: getSingleProduct,
+            filterByName: filterByName,
+            filterBySKU: filterBySKU,
+        };
+
+        function getProductInfo(req) {
+            return $http(req);
+        }
+
+        function getSingleProduct(req) {
+            return $http(req);
+        }
+
+        function filterByName(uri, pathVariable, filterParam) {
+            return restAccessor.get(uri, pathVariable, filterParam);
+        }
+
+        function filterBySKU(req) {
+            return $http(req);
+        }
+    }
+
+})();

@@ -1,0 +1,43 @@
+/**!
+ * parameters-add-directive
+ * @author jianglj
+ * @create 2016-04-19 19:34
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.biz.product')
+        .directive('xcParametersAdd', parametersAdd);
+
+
+    parametersAdd.$inject = [
+
+    ];
+    function parametersAdd() {
+
+        return {
+            restrict: 'AE',
+            link: linkFunc
+        };
+
+        function linkFunc(scope, element, attrs) {
+            var source = '<span class="custom edit">' +
+                            '<input type="text" placeholder="自定义参数"> ' +
+                            '<input type="text" placeholder="自定义参数值"> ' +
+                            '<a href="javascript:void(0)" class="x">X</a>' +
+                            '</span>',
+                $element = $(element);
+
+            $element.on('click', '.parameter-btn', function(){
+                var $this = $(this);
+                $('.J_product-param').append(source);
+            })
+
+            $element.on('click', '.x', function(){
+                $(this).parents('.edit').remove();
+            })
+        }
+    }
+
+})();

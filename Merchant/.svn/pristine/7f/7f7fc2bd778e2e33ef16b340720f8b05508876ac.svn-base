@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html ng-app="xcore.login" lang="en" class="ie8">
+<![endif]-->
+<!--[if !IE]><!-->
+<html ng-app="xcore.login" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Merchant | ZZT.tm</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <link rel="stylesheet" href="../bower_components/jquery-ui/themes/base/minified/jquery-ui.min.css"/>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</head>
+<body class="pace-top">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+
+	<div class="login-cover">
+	    <div class="login-cover-image"><img src="assets/images/bg-3.jpg" data-id="login-cover-image" alt="" /></div>
+	    <div class="login-cover-bg"></div>
+	</div>
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade">
+	    <!-- begin login -->
+        <div class="login login-v2" data-pageload-addclass="animated fadeIn">
+            <!-- begin brand -->
+            <div class="login-header">
+                <div class="brand">
+                    <span class="logo"></span> POSS
+                    <small>喆兔商户管理平台</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in"></i>
+                </div>
+            </div>
+            <!-- end brand -->
+            <div ng-controller="login.LoginController" class="login-content" xc-enter-press>
+                <form name="loginForm" class="margin-bottom-0" parsley-validate>
+                    <div class="form-group m-b-20">
+                        <input required ng-model="loginName" type="text" class="form-control input-lg" placeholder="用户名" />
+                    </div>
+                    <div class="form-group m-b-20">
+                        <input required validate-on="dirty" ng-model="password" type="password" class="form-control input-lg" placeholder="密码" />
+                    </div>
+                    <div class="form-group m-b-20">
+                      <input required ng-model="domainCode" type="text" class="form-control input-lg" placeholder="域编码" />
+                    </div>
+                    <div class="login-buttons">
+                      <button data-ng-click="login()" type="button" ng-disabled="xhrProcessing" class="btn btn-success btn-block btn-lg">登 录</button>
+                    </div>
+                    <div class="m-t-20">
+                        还没有账号? 快联系老板.
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end login -->
+
+	</div>
+	<!-- end page container -->
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <script src="../bower_components/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="../bower_components/jquery-hashchange/jquery.ba-hashchange.min.js"></script>
+  <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+  <!-- endbuild -->
+
+  <script>
+    $.when($('#page-loader').addClass('hide')).done(function() {
+      $('#page-container').addClass('in');
+    });
+  </script>
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+/**!
+ * relate-product-directive
+ * @author
+ * @create 2016-04-17 15:13
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore')
+        .directive('xcRelateProduct', relateProduct);
+
+
+    relateProduct.$inject = [
+
+    ];
+    function relateProduct() {
+
+        return {
+            restrict: 'AE',
+            replace: true,
+            transclude: true,
+            templateUrl: 'app/business/product/publish/view/relate-product.html',
+            controller: controllerFunc,
+            link: linkFunc
+        };
+
+        function controllerFunc($scope){
+
+        }
+
+        function linkFunc(scope, element, attrs) {
+            scope._relateProduct = function(num){
+                console.log(num);
+            }
+        }
+
+
+    }
+
+})();

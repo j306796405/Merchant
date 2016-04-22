@@ -1,0 +1,217 @@
+{
+  "brand": {
+    "brandName": "蓝伯基尼",
+    "brancCode": "00001"
+  },
+  "classes": {
+    "pcCode": "3334035",
+    "name": "Test三级采购分类",
+    "parentCode": "3334",
+    "parentName": "Test二级采购分类",
+    "upperCode": "33",
+    "upperName": "哈哈哈哈",
+    "level": 3,
+    "specifications": [
+      {
+        "ppid": "7",
+        "name": "衣服尺码",
+        "multiSelect": "0",
+        "showName": "请选择颜色",
+        "values": [
+          {
+            "pvid": "40",
+            "name": "S"
+          },
+          {
+            "pvid": "41",
+            "name": "M"
+          },
+          {
+            "pvid": "42",
+            "name": "L"
+          },
+          {
+            "pvid": "43",
+            "name": "XL"
+          }
+        ]
+      },
+      {
+        "ppid": "8",
+        "name": "衣服大小",
+        "multiSelect": "0",
+        "showName": "请选择颜色",
+        "values": [
+          {
+            "pvid": "44",
+            "name": "165"
+          },
+          {
+            "pvid": "45",
+            "name": "170"
+          },
+          {
+            "pvid": "46",
+            "name": "175"
+          },
+          {
+            "pvid": "47",
+            "name": "180"
+          }
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "ppid": "1",
+        "name": "颜色",
+        "multiSelect": "0",
+        "showName": "请选择颜色",
+        "values": [
+          {
+            "pvid": "27",
+            "name": "绿色"
+          },
+          {
+            "pvid": "28",
+            "name": "绿色"
+          },
+          {
+            "pvid": "29",
+            "name": "红色"
+          },
+          {
+            "pvid": "30",
+            "name": "绿色"
+          },
+          {
+            "pvid": "31",
+            "name": "红色"
+          },
+          {
+            "pvid": "32",
+            "name": "狗屎黄"
+          },
+          {
+            "pvid": "33",
+            "name": "绿色"
+          },
+          {
+            "pvid": "34",
+            "name": "红色"
+          },
+          {
+            "pvid": "35",
+            "name": "绿色"
+          },
+          {
+            "pvid": "36",
+            "name": "红色"
+          },
+          {
+            "pvid": "37",
+            "name": "狗屎黄"
+          },
+          {
+            "pvid": "38",
+            "name": "狗屎黄"
+          },
+          {
+            "pvid": "39",
+            "name": "绿色"
+          }
+        ]
+      },
+      {
+        "ppid": "6",
+        "name": "尺码",
+        "multiSelect": "0",
+        "showName": "尺码",
+        "values": [
+          {
+            "pvid": "70",
+            "name": "aaaaa"
+          },
+          {
+            "pvid": "71",
+            "name": "asdfgadf"
+          }
+        ]
+      },
+      {
+        "ppid": "6",
+        "name": "111",
+        "multiSelect": "0",
+        "showName": "111",
+        "values": [
+          {
+            "pvid": "70",
+            "name": "aaaaa"
+          },
+          {
+            "pvid": "71",
+            "name": "asdfgadf"
+          }
+        ]
+      },
+      {
+        "ppid": "6",
+        "name": "222",
+        "multiSelect": "2",
+        "showName": "222",
+        "values": [
+          {
+            "pvid": "70",
+            "name": "aaaaa"
+          },
+          {
+            "pvid": "71",
+            "name": "asdfgadf"
+          }
+        ]
+      },
+      {
+        "ppid": "6",
+        "name": "333",
+        "multiSelect": "2",
+        "showName": "333",
+        "values": [
+          {
+            "pvid": "70",
+            "name": "aaaaa"
+          },
+          {
+            "pvid": "71",
+            "name": "asdfgadf"
+          }
+        ]
+      }
+    ],
+    "parameters": [
+      {
+        "ppid": "15",
+        "name": "测试",
+        "multiSelect": "1",
+        "showName": "测试测试",
+        "values": [
+          {
+            "pvid": "82",
+            "name": "HAHAHA"
+          }
+        ]
+      },
+      {
+        "ppid": "16",
+        "name": "测试2",
+        "multiSelect": "1",
+        "showName": "测试测试2",
+        "values": [
+          {
+            "pvid": "83",
+            "name": "HWWEWE"
+          }
+        ]
+      }
+    ]
+  }
+}

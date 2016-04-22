@@ -1,0 +1,44 @@
+/**!
+ * sidebar.directive.js
+ * @author jianglj
+ * @create 2016-04-15 16:10
+ */
+(function() {
+    'use strict';
+
+    angular
+        .module('xcore.main')
+        .directive('xcMainSideBar', sideBar);
+
+    sideBar.$inject = [
+        
+    ];
+
+    function sideBar() {
+        var directive = {
+            restrict: 'E',
+            scope: false,
+            templateUrl: 'app/main/view/sidebar.html',
+            controller: controllerFunc,
+            link: linkFunc
+
+        };
+
+        return directive;
+
+        controllerFunc.$inject = [
+            '$scope',
+            '$state'
+        ];
+
+        function controllerFunc($scope, $state) {
+
+        }
+
+        function linkFunc(scope, el) {
+
+        }
+
+    }
+
+})();

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html ng-app="xcore.main" lang="zh-cmn-Hans" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html ng-app="xcore.main" lang="zh-cmn-Hans">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title id="page-title">Merchant | ZZT.tm</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="app/styles/public.css">
+    <link rel="stylesheet" href="app/styles/btn.css">
+    <link rel="stylesheet" href="app/styles/color.css">
+    <link rel="stylesheet" href="app/styles/easydialog.css">
+    <link rel="stylesheet" href="app/styles/login.css">
+    <link rel="stylesheet" href="app/styles/mct.css">
+    <link rel="stylesheet" href="app/components/auth/style.css">
+    <link rel="stylesheet" href="app/components/notification/style.css">
+    <link rel="stylesheet" href="app/components/pagination/pagination.css">
+    <link rel="stylesheet" href="app/components/validation/style.css">
+    <link rel="stylesheet" href="../bower_components/allmighty-autocomplete/style/autocomplete.css">
+    <style>
+        .inline-block{
+            display: inline-block!important;
+        }
+        .pro-property-wrap{
+            width: 800px;
+        }
+        .pro-property-box{
+
+        }
+        .pro-property-box li{
+            float: left; margin-bottom: 15px;
+        }
+        .pro-property-box li .key{
+            display: inline-block; width: 100px;
+            text-align: right;
+        }
+        .pro-property-box li .form-ele{
+            width: 132px; min-width: 132px;
+        }
+        .pro-property-box li .input{
+            width: 127px; min-width: 127px;
+        }
+        .pro-property-box li .checkgroup{
+            width: 119px; padding: 5px; margin-right: 0;
+        }
+        .custom{
+            margin-right: 10px;
+        }
+    </style>
+    <script src="../bower_components/art-template/dist/template-native.js"></script>
+
+</head>
+
+<body>
+
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<script src="../bower_components/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="../bower_components/jquery-hashchange/jquery.ba-hashchange.min.js"></script>
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- endbuild -->
+
+<script>
+    $.when($('#page-loader').addClass('hide')).done(function () {
+        $('#page-container').addClass('in');
+    });
+</script>
+
+<!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
+
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+
+        <div class="top-nav fr"><em class="user"></em> <a href="#">{{ session.userName }}</a><a href="#" class="quit">安全退出</a>
+        </div>
+    </div>
+
+    <!--左侧内容-->
+    <xc-main-side-bar></xc-main-side-bar>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+
+                <div class="panel" ui-view="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+div.xc_pagination_stat {
+  padding-top: 8px;
+  float: left;
+  clear: both;
+}
+
+div.xc_pagination_bar {
+  float: right;
+  margin: 0;
+}
+
+div.xc_pagination_bar ul.pagination {
+  margin: 0px;
+}
+div.xc_pagination_bar>ul.pagination>li.disabled>span:hover {
+  cursor: not-allowed;
+  background-color: #fff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+div.xc_pagination_bar>ul.pagination>li>span {
+  color: #707478;
+  background-color: #FFF;
+  cursor: pointer;
+}
+div.xc_pagination_bar>ul.pagination>li>span:hover {
+  color: #707478;
+  background-color: #f0f3f5;
+  cursor: pointer;
+}
+div.xc_pagination_bar>ul.pagination>li.processing>span:hover {
+  background-color: #FFF;
+  cursor: not-allowed;
+}
+div.xc_pagination_bar>ul.pagination>li.active>span {
+  color: #FFF;
+}
+div.xc_pagination_bar>ul.pagination>li.active>span:hover {
+  color: #fff;
+}
+.xc_pagination_bar li:hover,
+.xc_pagination_bar li:focus {
+  background-color: #f0f3f5;
+  border-color: #f0f3f5;
+}

@@ -1,0 +1,87 @@
+/*Gritter Notifications*/
+#gritter-notice-wrapper {
+  width: 320px;
+  top: 45px;
+}
+.gritter-without-image {
+  color: #EFEFEF;
+}
+.gritter-light .gritter-close {
+  background-image: none !important;
+  color: #222;
+}
+.gritter-close {
+  display:none;
+  position:absolute;
+  top:5px;
+  left:3px;
+  background: none !important;
+  cursor:pointer;
+  width:30px;
+  height:30px;
+  text-indent:-9999em;
+}
+
+
+/*Colors */
+.gritter-item-wrapper.primary .gritter-top {
+  background-color: #2494f2 !important;
+}
+.gritter-item-wrapper.primary .gritter-item {
+  background-color: #2494f2 !important;
+}
+.gritter-item-wrapper.primary .gritter-bottom {
+  background-color: #2494f2 !important;
+}
+
+
+.gritter-item-wrapper.success .gritter-top {
+  background-color: #60c060 !important;
+}
+.gritter-item-wrapper.success .gritter-item {
+  background-color: #60c060 !important;
+}
+.gritter-item-wrapper.success .gritter-bottom {
+  background-color: #60c060 !important;
+}
+
+
+.gritter-item-wrapper.info .gritter-top {
+  background-color: #5bc0de !important;
+}
+.gritter-item-wrapper.info .gritter-item {
+  background-color: #5bc0de !important;
+}
+.gritter-item-wrapper.info .gritter-bottom {
+  background-color: #5bc0de !important;
+}
+
+.gritter-item-wrapper.warning .gritter-top {
+  background-color: #ff9900 !important;
+}
+.gritter-item-wrapper.warning .gritter-item {
+  background-color: #ff9900 !important;
+}
+.gritter-item-wrapper.warning .gritter-bottom {
+  background-color: #ff9900 !important;
+}
+
+.gritter-item-wrapper.danger .gritter-top {
+  background-color: #df4b33 !important;
+}
+.gritter-item-wrapper.danger .gritter-item {
+  background-color: #df4b33 !important;
+}
+.gritter-item-wrapper.danger .gritter-bottom {
+  background-color: #df4b33 !important;
+}
+
+.gritter-item-wrapper.dark .gritter-top {
+  background-color: #23262b !important;
+}
+.gritter-item-wrapper.dark .gritter-item {
+  background-color: #23262b !important;
+}
+.gritter-item-wrapper.dark .gritter-bottom {
+  background-color: #23262b !important;
+}

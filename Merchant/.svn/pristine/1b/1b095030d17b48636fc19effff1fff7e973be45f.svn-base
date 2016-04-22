@@ -1,0 +1,225 @@
+/**
+ * 本组件封装了用于访问 restful 服务的方法.
+ * 当会话存在的时候, 请求头中会自动带上令牌.
+ * 所有方法皆返回一个 promise 对象:
+ *
+ *  若 success, promise 将 resolve:
+ *  {
+ *    status: HTTP 状态码,
+ *    statusText: HTTP 状态码对应的描述文本,
+ *    headers: 响应头(只包含了 Access-Control-Expose-Headers 所暴露出来的),
+ *    data: 响应体对象
+ *  }
+ *
+ *
+ *  若 fail, promise 将 reject:
+ *  {
+ *    status: HTTP 状态码,
+ *    statusText: HTTP 状态码对应的描述文本,
+ *    headers: 响应头(只包含了 Access-Control-Expose-Headers 所暴露出来的),
+ *    data: 响应体对象(包含了注入错误消息,及错误冗余信息)
+ *  }
+ *
+ * --------------------------------------------------------------------
+ * 此服务还提供了一个 $rootScope.xhrProcessing 变量,用于标识当前是否有 $http 的请求在处理中, true 标识至少有一个, false 则表示
+ * 没有,我们可以利用这个变量来 disable 按钮以防止用户意外连点.
+ *
+ *
+ */
+(function() {
+  'use strict';
+
+  angular.module('xcore.comp')
+    .factory('comp.rest.restAccessor', restAccessor);
+
+  restAccessor.$inject = [
+    'settings',
+    'comp.session.sessionService.constant',
+    '$rootScope',
+    '$http',
+    '$q'
+  ];
+  function restAccessor(settings, sessionConstant, $rootScope, $http, $q) {
+
+    $rootScope.$watch(function() {
+      return $http.pendingRequests.length > 0;
+    }, function(result) {
+
+      $rootScope.xhrProcessing = result;
+    });
+
+    return {
+
+      get: getFunc,
+
+      put: putFunc,
+
+      patch: patchFunc,
+
+      post: postFunc,
+
+      delete: deleteFunc
+
+    };
+
+    /**
+     * 获取资源
+     *
+     * @param uri
+     * @param filterParam
+     * @returns {Promise}
+     */
+    function getFunc(uri, pathVariable, filterParam) {
+
+      var req = constructRequest('GET', uri, pathVariable);
+      req.params = filterParam;
+
+      return $http(req).then(responseHandler, errResponseHandler);
+
+    }
+
+
+    /**
+     * 更新资源
+     *
+     * @param uri
+     * @param data
+     * @return {Promise}
+     */
+    function putFunc(uri, pathVariable, data) {
+
+      var req = constructRequest('PUT', uri, pathVariable);
+      req.data = data;
+
+      return $http(req).then(responseHandler, errResponseHandler);
+
+    }
+
+
+    /**
+     * 修改资源
+     *
+     * @param uri
+     * @param data
+     */
+    function patchFunc(uri, pathVariable, data) {
+
+      var req = constructRequest('PATCH', uri, pathVariable);
+      req.data = data;
+
+      return $http(req).then(responseHandler, errResponseHandler);
+
+    }
+
+
+    /**
+     * 创建资源
+     *
+     * @param uri
+     * @param data
+     * @returns {Promise}
+     */
+    function postFunc(uri, pathVariable, data) {
+
+      var req = constructRequest('POST', uri, pathVariable);
+      req.data = data;
+
+      return $http(req).then(responseHandler, errResponseHandler);
+
+    }
+
+
+    /**
+     *
+     * @param uri
+     * @returns {Promise}
+     */
+    function deleteFunc(uri, pathVariable) {
+
+      var req = constructRequest('DELETE', uri, pathVariable);
+
+      return $http(req).then(responseHandler, errResponseHandler);
+
+    }
+
+
+    function responseHandler(response) {
+      return {
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers(),
+        data: response.data
+      };
+    }
+
+    function errResponseHandler(errResponse) {
+      if (errResponse.status == -1) {
+        return $q.reject({
+          status: errResponse.status,
+          statusText: '访问异常',
+          headers: errResponse.headers(),
+          data: {status: errResponse.status, message: '访问异常'}
+        });
+      } else {
+        return $q.reject({
+          status: errResponse.status,
+          statusText: errResponse.statusText,
+          headers: errResponse.headers(),
+          data: errResponse.data
+        });
+      }
+
+    }
+
+
+    function constructRequest(verb, uri, pathVariables) {
+
+      // check uri
+      if (!S(uri).startsWith('/')) {
+        throw 'uri should be start with "/"';
+      }
+
+      // retrieve endpoint
+      var endpoint;
+      if (uri.lastIndexOf('/') > 1) {
+        endpoint = uri.substring(1, uri.indexOf('/', 1));
+      } else {
+        endpoint = uri.substring(1);
+      }
+
+      if (!settings.backend[endpoint]) {
+        throw 'endpoint [' + endpoint + '] not defined in xcore settings';
+      }
+
+      // process path variables
+      var resolvedUri = S(uri);
+      if (pathVariables) {
+        for (var variable in pathVariables) {
+          resolvedUri = resolvedUri.replaceAll(':' + variable, pathVariables[variable]);
+        }
+      }
+
+
+      var url = settings.backend[endpoint] + resolvedUri;
+      console.log("url="+url);
+      var request = {
+        method: verb,
+        url: url,
+        headers: {},
+        config: {
+          handleError: true
+        }
+
+      };
+
+      if (Cookies.get(sessionConstant.COOKIE_KEY_AUTH_TOKEN)) {
+        request.headers['X-Auth-Token'] = Cookies.get(sessionConstant.COOKIE_KEY_AUTH_TOKEN);
+      }
+
+      return request;
+
+    }
+
+  }
+
+})();

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html ng-app="xcore.login" lang="en" class="ie8">
+<![endif]-->
+<!--[if !IE]><!-->
+<html ng-app="xcore.login" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Merchant | ZZT.tm</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</head>
+<body>
+<!--头部内容-->
+<div class="header whitebg clearfix">
+    <div class="login-hd">
+        <a href="#" class="logo"></a>
+        <div class="top-nav fr"><a href="http://www.zzt.tm" target="_blank">喆喆兔首页</a> | <a
+                href="http://www.zzt.tm/foot-aboutus.htm" target="_blank">关于喆喆兔</a> | <a
+                href="http://www.zzt.tm/foot-contactus.htm" target="_blank">联系我们</a> | <a
+                href="http://www.zzt.tm/gwzn-qgsm.htm" target="_blank">帮助中心</a></div>
+    </div>
+</div>
+
+<div class="main-inner" ng-controller="login.LoginController" xc-enter-press>
+    <form name="loginForm" class="margin-bottom-0" parsley-validate>
+        <div class="theme">
+            <h1 class="title ac">商户登录</h1>
+            <div class="loginForm">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="loginName" class="control-label">商户账号</label>
+                        <input type="text" required ng-model="loginName" class="form-control wrong" id="loginName"
+                               name="loginName"
+                               placeholder="账户格式为电子邮件">
+                        <div class="promptxt wrong"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">商户密码</label>
+                        <input type="password" required validate-on="dirty" ng-model="password" name="password"
+                               class="form-control"
+                               id="password">
+                        <div class="promptxt success"><i class="zzticon icon-s success"></i></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="code" class="control-label">验证码</label>
+                        <div class="clearfix">
+                            <div class="code-input">
+                                <input type="text" class="form-control" id="code">
+                                <div class="promptxt success"><i class="zzticon icon-s success"></i></div>
+                            </div>
+                            <div class="code">
+                                <span class="codimg"><img src="../img/demo/demo.jpg"> </span>
+                                <a href="javascript:;" class="change-code">换一张</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" data-ng-click="login()" ng-disabled="xhrProcessing"
+                                class="btn btn-block btn-zzt">登 录
+                        </button>
+                    </div>
+                    <div class="mt20">
+                        <p class="wrongtxt red"><i class="zzticon icon-s wrong"></i> 账户不能为空</p>
+                        <p class="mt10">忘记密码，请联系客服或招商经理</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="foot ac">
+    上海喆兔网络技术有限公司 版权所有 2013-2016 保留所有权利<br>沪ICP备13031671号
+</div>
+
+
+<!-- build:js(src) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp inject` to automatically populate bower script dependencies -->
+<!-- endbower -->
+<script src="../bower_components/jquery-migrate/jquery-migrate.min.js"></script>
+<script src="../bower_components/jquery-hashchange/jquery.ba-hashchange.min.js"></script>
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- endbuild -->
+
+<script>
+    $.when($('#page-loader').addClass('hide')).done(function () {
+        $('#page-container').addClass('in');
+    });
+</script>
+
+<!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automatically insert here -->
+<!-- endinject -->
+
+<!-- inject:partials -->
+<!-- angular templates will be automatically converted in js and inserted here -->
+<!-- endinject -->
+<!-- endbuild -->
+
+</body>
+</html>
