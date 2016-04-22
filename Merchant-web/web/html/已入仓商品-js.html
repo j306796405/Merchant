@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link rel="stylesheet" href="../css/easydialog.css"/>
+    <link href="../css/mct.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+            <li class="sub-menu active">
+                <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                <ul class="sub" style="display: block">
+                    <li class="active"><a href="#">商品列表</a></li>
+                    <li><a href="#">入库商品</a></li>
+                    <li><a href="#">发布商品</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                <ul class="sub">
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <h1 class="channel-title"><b>发布销售商品</b><a href="商品审核记录.html">商品审核记录</a><span><button id="saveFormBtn" class="btn btn-primary" type="button">保存商品</button>&nbsp;&nbsp;<button
+                        class="btn btn-success" type="button">预览
+                </button>&nbsp;&nbsp;<button class="btn btn-info" type="button">复制商品</button></span></h1>
+
+                <div class="panel">
+                    <div class="panel-heading navy-blue">
+                        <ul class="tabnav nav-tabs">
+                            <li class="active">
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">商品基础信息</a>
+                            </li>
+                            <li>
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">商品价格/库存/渠道</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body whitebg pd20">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="enter-wrapper">
+                                    <h1 class="review-title">商品是否已入喆兔仓？
+                                        <span class="hint">（商品保存后将无法修改是否入仓选项）<em class="star">*</em></span>
+                                    </h1>
+                                    <input type="radio" id="yes" class="table-check check-element mr5" name="isWarehouse" value="1"/>
+                                    <label class="check-label mr15" for="yes">是</label>
+                                    <input type="radio" class="table-check check-element mr5" id="no" name="isWarehouse" value="0"/>
+                                    <label for="no" class="check-label mr15">否</label>
+                                </div>
+                                <div id="ifWarehouseView"></div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="channel1">
+                                    <h1 class="review-title">商品价格/库存<a class="channel-link" rel="0"
+                                                                       href="javascript:void(0)">分渠道设置价格/库存</a>
+                                    </h1>
+                                    <h4 class="sub-title">统一设置库存/价格</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>市场价（元）</th>
+                                            <th>销售价（元）</th>
+                                            <th>销售库存</th>
+                                            <th>限购数量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <h4 class="sub-title">已关联的采购商品 采购价 / 库存数量</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">采购商品名称</th>
+                                            <th>采购商品ID</th>
+                                            <th>采购价（元）</th>
+                                            <th>剩余库存</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="channel2">
+                                    <h1 class="review-title">商品价格/库存<a rel="1" class="channel-link"
+                                                                       href="javascript:void(0)">统一设置库存/价格</a>
+                                    </h1>
+                                    <h4 class="sub-title">分渠道设置库存/价格</h4>
+                                    <label class="mr20">
+                                        <input type="checkbox" class="table-check check-element mr5"/>喆喆兔-PC
+                                    </label>
+                                    <label class="mr20">
+                                        <input type="checkbox" class="table-check check-element mr5"/>喆喆兔-APP
+                                    </label>
+                                    <label class="mr20">
+                                        <input type="checkbox" class="table-check check-element mr5"/>喆喆兔-MOBILE
+                                    </label>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">渠道</th>
+                                            <th>市场价（元）</th>
+                                            <th>售价（元）</th>
+                                            <th>渠道库存</th>
+                                            <th>限购（0为不限购）</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-PC</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-APP</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-MOBILE</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="hint">（提示：分渠道设置库存后，各渠道之间的库存是独立的。）</p>
+                                    <h4 class="sub-title">已关联的采购商品 采购价 / 库存数量</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">采购商品名称</th>
+                                            <th>采购商品ID</th>
+                                            <th>采购价（元）</th>
+                                            <th>剩余库存</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="easyDialog_wrapper" id="aa" style="display: none">
+            <div class="easyDialog_content">
+                <h4 id="easyDialogTitle" class="easyDialog_title" style="cursor: move;"><a id="closeBtn" class="close_btn" title="关闭窗口" href="javascript:void(0)">×</a>相同编码组商品</h4>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th>规格</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td>红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td>红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td>红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td>红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div  class="easyDialog_wrapper" id="bb" style="display: none">
+            <div class="easyDialog_content">
+                <h4 class="easyDialog_title" style="cursor: move;"><a class="close_btn" title="关闭窗口" href="javascript:void(0)">×</a>提示</h4>
+                <div class="look2-content">
+                    规格组编码作用：<br/>
+                    因创建商品时，商品只允许添加一个规格，通过把规格组编码设置为相同的方式，把商品的多个规格呈现在一个商品详情页。
+                    只要各商品的规格组编码一致，就能在同一个商品详情页展示。
+                </div>
+            </div>
+        </div>
+
+        <div id="content"></div>
+
+        <div class="prompt" id="cc" style="display: none">
+            <div class="mainbody ac">
+                <a class="close_btn" title="关闭窗口" href="javascript:;">×</a>
+                <div class="txt">
+                    <i class="zzticon icon-l warning"></i>修改成功，保存商品后生效！
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <style>
+        .fileupload .pic-list .preview{
+            display: table-cell; height: 100px; width: 100px;
+            vertical-align: middle; text-align: center; font-size: 0;
+        }
+        .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+        .clearfix{*+height:1%;}
+        .pro-property-wrap{
+            width: 800px;
+        }
+        .pro-property-box{
+
+        }
+        .pro-property-box li{
+            float: left; margin-bottom: 15px;
+        }
+        .pro-property-box li .key{
+            display: inline-block; width: 100px;
+            text-align: right;
+        }
+        .pro-property-box li .form-ele{
+            width: 132px; min-width: 132px;
+        }
+        .pro-property-box li .input{
+            width: 127px; min-width: 127px;
+        }
+        .pro-property-box li .checkgroup{
+            width: 119px; padding: 5px; margin-right: 0;
+        }
+    </style>
+
+    <!-- tempaltes start -->
+        <!------ 入仓模块 S ------>
+        <!-- 入口模块 S-->
+        <script id="Warehouse.Main" type="text/html">
+
+            <div class="enter-wrapper">
+                <h1 class="review-title">关联采购商品</h1>
+                <label for="relativeProductNum" class="select-label"><em class="star">*</em>请选择关联商品数量：</label>
+                <select class="select-tab mr5" id="relativeProductNum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="button" class="btn btn-primary btn-sm" id="relativeProductNumBtn">确定</button>
+                <div id="relativeProductView"></div>
+            </div>
+            <div id="productInfoView"></div>
+        </script>
+        <!-- 入口模块 E-->
+
+        <!-- 商品规格，商品图片，商品参数，商品详情模块 S-->
+        <script id="Warehouse.ProductInfo" type="text/html">
+            <div class="enter-wrapper">
+                <h1 class="review-title">商品基本信息</h1>
+                <div>
+                    <p class="mt20">
+                        <label>商品分类：</label>
+                        <%= info.classes.upperName %> > <%= info.classes.parentName %> > <%= info.classes.name %>
+                    </p>
+                    <p class="mt20">
+                        <label>品牌名称：</label>
+                        <%= info.brand.brandName %>
+                    </p>
+                    <p class="mt20">
+                        <label for="brandName">商品名称：</label>
+                        <input type="text" id="brandName">
+                    </p>
+
+                    <p class="mt20">
+                        <label for="brandSummary" class="desc-label">商品卖点：</label>
+                        <textarea id="brandSummary"></textarea>
+                    </p>
+                </div>
+            </div>
+            <div class="enter-wrapper">
+                <h1 class="review-title">商品规格</h1>
+                <div class="J_specifications_checkbox_wrap">
+                    <% for(var i= 0; i< info.classes.specifications.length; i++ ){ %>
+                        <span class="J_specifications_checkbox_item">
+                        <label class="check-label mr20">
+                            <input type="checkbox" class="table-check check-element mr5">
+                            <%= info.classes.specifications[i].name %>
+                        </label>
+                    </span>
+                    <% } %>
+                </div>
+                <div id="productStandardView">
+                    <% for(var i= 0; i< info.classes.specifications.length; i++ ){ %>
+                        <div class="J_productStandardItem hidden">
+                            <span class="f12 format-title"><%= info.classes.specifications[i].name %></span>
+                            <div class="format mt10 clearfix">
+                                <% for(var j= 0; j< info.classes.specifications[i].values.length; j++ ){ %>
+                                    <span>
+                                        <label>
+                                            <input type="radio" name="<%= info.classes.specifications[i].ppid %>" class="table-check check-element">
+                                             <%= info.classes.specifications[i].name %>
+                                        </label>
+                                    </span>
+                                <% } %>
+                                <span class="hidden">
+                                    <input type="radio" name="<%= info.classes.specifications[i].ppid %>" class="table-check" data-new="1">
+                                    <input type="text" class="size-fillin">
+                                    <a href="javascript:void(0)" class="x">X</a>
+                                </span>
+                                <em class="add J_btn-add-standard">
+                                    <a class="btn btn-success btn-sm" href="javascript:;">+添加</a>
+                                </em>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+                <p class="hint">（创建商品时一次只能创建一种规格，如需创建多种规格请使用复制商品功能。如：某衣服有红色S码、红色L码、黄色S码、黄色L码
+                    四种规格，需先创建其中一种规格，如红色S码，然后再使用复制功能创建其它三种规格。）</p>
+            </div>
+            <form id="fileupload" class="fileupload" action="//jquery-file-upload.appspot.com/" method="POST"
+                  enctype="multipart/form-data">
+                <div class="enter-wrapper">
+                    <h1 class="review-title">商品图片</h1>
+                    <ul class="pic-list files">
+                        <li class="pic-add rel">
+                            <input type="file" class="file" name="files[]" multiple="">
+                            <a href="javascript:void(0)"></a>
+                        </li>
+                    </ul>
+                    <p class="hint">上传图片最大500K；长宽为1:1(正方形)；最多可上传8张，最少须上传1张</p>
+                </div>
+            </form>
+            <div class="enter-wrapper">
+                <h1 class="review-title">商品属性</h1>
+                <div class="pro-property-wrap">
+                    <% for (var i = 0; i < info.classes.attributes.length; i ++) { %>
+                        <% if( i % 3 === 0){ %>
+                            <%= info.classes.attributes[i].multiSelect %>
+                            <div>
+                                <ul class="pro-property-box clearfix">
+                                    <!-- 0:单选 1:多选  2:输入 -->
+                                    <% if( info.classes.attributes[i].multiSelect === 0){ %>
+                                        <li>
+                                            <label class="key">商品产地：</label>
+                                            <select class="form-ele">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </li>
+                                    <% } %>
+                                    <% if( info.classes.attributes[i].multiSelect === 1){ %>
+                                        <li>
+                                            <label class="key"><em class="star">*</em>纸尿裤片数：</label>
+                                            <input type="text" class="form-ele input">
+                                        </li>
+                                    <% } %>
+                                    <% if( info.classes.attributes[i].multiSelect === 2){ %>
+                                        <li>
+                                            <label class="key">风格：</label>
+                                            <span class="checkgroup">
+                                                <label>
+                                                    <input type="checkbox" class="table-check">
+                                                    休闲
+                                                </label>
+                                            </span>
+                                        </li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+            <div class="enter-wrapper">
+                <h1 class="review-title">商品参数
+                    <a href="javascript:void(0)" class="parameter-btn">自定义参数</a>
+                </h1>
+                <div class="J_product-param">
+                    <% for (var i = 0; i < info.classes.parameters.length; i ++) { %>
+                        <span class="custom">
+                            <label><%= info.classes.parameters[i].name %>：</label>
+                            <input type="text">
+                        </span>
+                    <% } %>
+                    <span class="custom edit hidden" id="product-param-edit">
+                        <input type="text" placeholder="自定义参数">
+                        <input type="text" placeholder="自定义参数值">
+                        <a href="javascript:void(0)" class="x">X</a>
+                    </span>
+                </div>
+            </div>
+            <div class="enter-wrapper">
+                <h1 class="review-title">商品详情</h1>
+                <div class="editor">
+                    <img src="../img/edit.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </script>
+        <!-- 商品规格，商品图片，商品参数，商品详情模块 E-->
+
+        <!-- 点击关联商品数量按钮后的循环模块 S-->
+        <script id="Warehouse.RelatedPro" type="text/html">
+            <% for (var i = 0; i < repeat; i ++) { %>
+                <div class="related-pro">
+                    <input type="text" class="related-input mr5">
+                    <button type="button" class="btn btn-primary btn-sm J_relatedBtn">关联</button>
+                    <span class="hint">（请从查询列表中选中需要关联的采购商品，再点击关联按钮进行关联）</span>
+                    <p class="reduce">
+                        <label class="select-label"><em class="star">*</em>库存扣减数量：<input type="text" class="J_nums"></label>
+                    </p>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th class="channel-name">采购商品名称</th>
+                            <th>采购商品ID</th>
+                            <th>仓库</th>
+                            <th>采购价</th>
+                            <th>剩余库存</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <label class="check-label">
+                        <input type="radio" class="table-check check-element mr5 J_isMain" name="isMain">
+                        选择此采购商品的分类作为销售分类
+                    </label>
+                </div>
+            <% } %>
+        </script>
+        <!-- 点击关联商品数量按钮后的循环模块 E-->
+
+        <!-- 点击关联按钮后的循环模块 S-->
+        <script id="Warehouse.RelatedProTableTr" type="text/html">
+            <tr>
+                <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                <td class="J_pprId">AA001</td>
+                <td>杭州仓</td>
+                <td>1000.00</td>
+                <td>1000</td>
+                <td><a href="javascript:;" class="btn btn-warning btn-sm">取消关联</a>
+                </td>
+            </tr>
+        </script>
+        <!-- 点击关联按钮后的循环模块 E-->
+
+        <!-- 未上传模板 S-->
+        <script id="template-upload" type="text/html">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <li class="rel">
+                <div class="preview"></div>
+                <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                <a href="javascript:void(0)" class="sort sort-r abs"></a>
+            </li>
+            {% } %}
+        </script>
+        <!-- 未上传模板 E-->
+
+        <!-- 已上传模板 S-->
+        <script id="template-download" type="text/html">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <li class="rel">
+                <div class="preview"></div>
+                <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                <a href="javascript:void(0)" class="sort sort-r abs"></a>
+            </li>
+            {% } %}
+        </script>
+        <!-- 已上传模板 S-->
+
+        <!------ 入仓模块 E ------>
+    <!-- tempaltes end -->
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="../js/template-native.js"></script>
+    <script type="text/javascript" src="../js/easydialog.js"></script>
+    <script src="../js/jquery.ui.widget.js"></script>
+    <!--<script src="../js/tmpl.min.js"></script>-->
+    <script src="../js/load-image.all.min.js"></script>
+    <script src="../js/canvas-to-blob.min.js"></script>
+    <script src="../js/jquery.iframe-transport.js"></script>
+    <script src="../js/jquery.fileupload.js"></script>
+    <script src="../js/jquery.fileupload-process.js"></script>
+    <script src="../js/jquery.fileupload-image.js"></script>
+    <script src="../js/jquery.fileupload-validate.js"></script>
+    <script src="../js/jquery.fileupload-ui.js"></script>
+    <script src="../js/core.js"></script>
+    <script src="../_js/create-product.js"></script>
+    <![endif]-->
+
+
+<script>
+
+</script>
+</body>
+</html>

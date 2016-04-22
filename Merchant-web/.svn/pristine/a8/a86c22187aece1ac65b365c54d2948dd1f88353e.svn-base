@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "btn.scss";
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 登录页样式 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+//重设body背景颜色
+body{
+  background: $white;
+}
+
+//主要样式
+.main-inner{
+  padding: 78px 0 82px; min-height: 652px; background: #f1f2f7;
+  .theme{
+    margin: 0 auto; width: 858px; height: 100%; min-height: 652px; background: $white;
+  }
+  .title{
+   display:block; width:100%; height: 40px;  line-height: 40px; padding: 30px 0; font-size: 22px; color: $white; background: #323a45; font-family:"Microsoft Yahei",tahoma,"\5B8B\4F53","Hiragino Sans GB","Helvetica Neue",Helvetica,arial,Verdana,sans-serif,"WenQuanYi Micro Hei"; font-weight: normal;
+  }
+}
+
+//登录表单样式
+.loginForm{
+  width: 347px; padding:57px 0 0; min-height:475px; margin: 0 auto;
+  .btn{
+    @include borderRadius(0); padding: 13px 18px; font-size: 18px; font-family:"Microsoft Yahei",tahoma,"\5B8B\4F53","Hiragino Sans GB","Helvetica Neue",Helvetica,arial,Verdana,sans-serif,"WenQuanYi Micro Hei"; margin-top: 24px;
+  }
+  .form-group{
+     padding: 0; position: relative; width: 100%;
+  }
+  .control-label{
+    display: block; text-align: left; width: auto; padding-top: 20px; height: 24px; font-size: 12px; color: $default;
+  }
+  .form-control{
+    display: block; min-width: 1px; width:321px; height: 30px; line-height: 30px; padding-top: 10px; padding-bottom: 10px; @include borderRadius(0);
+    &.wrong{
+      border-color: $zztcolor;
+    }
+  }
+  .promptxt{
+    height: 24px;display: inline-block; text-align: right; position: absolute; right: 0;
+    &.wrong{
+      top: 20px; color: $zztcolor;
+    }
+    &.success{
+      bottom: 10px; color: $successfont; right: 6px;
+    }
+  }
+  .code-input{
+    width: 164px; position: relative; display: inline-block;float: left; /**float: left;*/
+    .form-control{
+      width:138px;
+    }
+  }
+  .code{
+    width: 176px; position: relative; display: inline-block; float: left;
+    a{
+      color: $default;
+    }
+  }
+}
+//登录说明文本样式
+/*.logintxt{
+  width: 252px; padding:190px 20px 0 56px; color: $grey;
+  a{
+    color: #333; text-decoration:underline;
+    &:hover{
+      color: $zztcolor;
+    }
+  }
+}*/
+
+//foot
+.foot{
+  padding: 30px 0; line-height: 30px;
+}

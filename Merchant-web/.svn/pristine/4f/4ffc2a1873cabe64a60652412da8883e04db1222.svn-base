@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link href="../css/zzt.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <!--头部内容-->
+        <div class="header whitebg clearfix">
+            <a href="#" class="logo"></a>
+            <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+        </div>
+
+        <!--左侧内容-->
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+                <li class="sub-menu active">
+                    <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                    <ul class="sub" style="display: block">
+                        <li class="active"><a href="#">商品列表</a></li>
+                        <li><a href="#">入库商品</a></li>
+                        <li><a href="#">发布商品</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                    <ul class="sub">
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-user"></i><span>商户信息</span></a>
+                    <ul class="sub">
+                        <li><a href="#">基本信息</a></li>
+                        <li><a href="#">修改密码</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--右侧主体内容-->
+        <div class="main-content">
+            <div class="main-wrapper">
+                <div class="wrapper">
+
+                    <!--右侧内容部分-->
+                    <!--面包屑-->
+                    <h3 class="bread-crumbs">商户首页</h3>
+                    <div class="panel-body">
+
+                        <div class="alert alert-warning">
+                            <b>温馨提示：</b>您还未修改默认密码，为了账户安全，请<a href="#" class="red">立即修改</a>
+                        </div>
+                        <br>
+
+                        <div class="alert alert-success">
+                            <b>温馨提示：</b>您还未修改默认密码，为了账户安全，请<a href="#" class="red">立即修改</a>
+                        </div>
+                        <br>
+
+                        <div class="alert alert-danger">
+                            <b>温馨提示：</b>您还未修改默认密码，为了账户安全，请<a href="#" class="red">立即修改</a>
+                        </div>
+                        <br>
+
+                        <div class="alert alert-info">
+                            <b>温馨提示：</b>您还未修改默认密码，为了账户安全，请<a href="#" class="red">立即修改</a>
+                        </div>
+                        <br>
+
+                    </div>
+
+                    <div class="whitebg pd20 mt20">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>商品名称</th>
+                                <th>品牌</th>
+                                <th>销售商品编号</th>
+                                <th>仓库/类型</th>
+                                <th>厂商指导价</th>
+                                <th>入库库存</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-success btn-sm">浏览</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-success btn-sm">浏览</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-success btn-sm">浏览</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-success btn-sm">浏览</a></td>
+                            </tr>
+                            <tr class="success">
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td class="red">0</td>
+                                <td><a href="javascript:;" class="btn btn-success btn-sm">浏览</a></td>
+                            </tr>
+                            <tr class="danger">
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-danger btn-sm">浏览</a></td>
+                            </tr>
+                            <tr class="warning">
+                                <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                <td>路易威登/LouisVuitton </td>
+                                <td>4010200726</td>
+                                <td>喆喆兔杭州仓（保税仓）</td>
+                                <td>999.99</td>
+                                <td>99</td>
+                                <td><a href="javascript:;" class="btn btn-warning btn-sm">浏览</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="panel mt20">
+                        <div class="panel-heading navy-blue">
+                            <ul class="tabnav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="javascript:">全部</a></li>
+                                <li><a data-toggle="tab" href="javascript:">已上架</a></li>
+                                <li><a data-toggle="tab" href="javascript:">已下架</a></li>
+                                <li><a data-toggle="tab" href="javascript:">上架审核中</a></li>
+                                <li><a data-toggle="tab" href="javascript:">下架审核中</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body whitebg pd20">
+                            <div class="tab-content">
+                                <div class="tab-pane active">全部</div>
+                                <div class="tab-pane">已上架</div>
+                                <div class="tab-pane">已下架</div>
+                                <div class="tab-pane">上架审核中</div>
+                                <div class="tab-pane">下架审核中</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--右侧内容部分end-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="../js/zzt.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('demoBtn1').onclick = function(){
+                easyDialog.open({
+                    container : {
+                        header : '弹出层标题',
+                        content : '欢迎使用easyDialog : )',
+                        yesFn : btnFn,
+                        noFn : true
+                    },
+                    fixed : false
+                });
+            };
+        })
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link href="../css/zzt.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <!--头部内容-->
+        <div class="header whitebg clearfix">
+            <a href="#" class="logo"></a>
+            <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+        </div>
+
+        <!--左侧内容-->
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-commodity"></i><span>商品</span></a>
+                    <ul class="sub">
+                        <li><a href="#">商品列表</a></li>
+                        <li><a href="#">入库商品</a></li>
+                        <li><a href="#">发布商品</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                    <ul class="sub">
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+                </li>
+
+                <li class="sub-menu active">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-user"></i><span>商户信息</span></a>
+                    <ul class="sub" style="display: block">
+                        <li class="active"><a href="#">基本信息</a></li>
+                        <li><a href="#">修改密码</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--右侧主体内容-->
+        <div class="main-content">
+            <div class="main-wrapper">
+                <div class="wrapper">
+
+                    <!--右侧内容部分-->
+                    <!--商户信息-->
+                    <div class="panel">
+                        <div class="mainpanel whitebg">
+                            <!--面包屑-->
+                            <h3 class="bread-crumbs">商户信息</h3>
+
+                            <div class="base-userinfo">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>店铺名称</th>
+                                        <td>彩蚁旗舰店</td>
+                                    </tr>
+                                    <tr>
+                                        <th>客服电话</th>
+                                        <td>021-61623690</td>
+                                    </tr>
+                                    <tr>
+                                        <th>电子邮件地址</th>
+                                        <td>it@zzt.tm</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货地址</th>
+                                        <td>上海市浦东新区晨晖路88号1号楼西侧102室 </td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货联系电话</th>
+                                        <td>021-61623690</td>
+                                    </tr>
+                                    <tr>
+                                        <th>收货人</th>
+                                        <td>桂世勇</td>
+                                    </tr>
+                                    <tr>
+                                        <th>发货提醒号码</th>
+                                        <td>13912345678</td>
+                                    </tr>
+                                    <tr>
+                                        <th>账号状态</th>
+                                        <td>正常</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--公司信息-->
+                    <div class="panel mt20">
+                        <div class="mainpanel whitebg">
+                            <!--面包屑-->
+                            <h3 class="bread-crumbs">公司信息</h3>
+
+                            <div class="base-userinfo">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th>商户名称</th>
+                                        <td>上海喆兔网络技术有限公司</td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在省</th>
+                                        <td>上海市</td>
+                                    </tr>
+                                    <tr>
+                                        <th>所在城市</th>
+                                        <td>直辖区县</td>
+                                    </tr>
+                                    <tr>
+                                        <th>公司地址</th>
+                                        <td>上海市浦东新区晨晖路88号1号楼西侧102室</td>
+                                    </tr>
+                                    <tr>
+                                        <th>公司联系电话</th>
+                                        <td>021-61623690</td>
+                                    </tr>
+                                    <tr>
+                                        <th>公司联系人</th>
+                                        <td>桂世勇</td>
+                                    </tr>
+                                    <tr>
+                                        <th>组织机构代码</th>
+                                        <td>330483000110106</td>
+                                    </tr>
+                                    <tr>
+                                        <th>税务号</th>
+                                        <td>330483747733245</td>
+                                    </tr>
+                                    <tr>
+                                        <th>营业执照号</th>
+                                        <td>74773324-5</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--右侧内容部分end-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="../js/zzt.js"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('demoBtn1').onclick = function(){
+                easyDialog.open({
+                    container : {
+                        header : '弹出层标题',
+                        content : '欢迎使用easyDialog : )',
+                        yesFn : btnFn,
+                        noFn : true
+                    },
+                    fixed : false
+                });
+            };
+        })
+    </script>
+
+  </body>
+</html>

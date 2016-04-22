@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link href="../css/mine.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+            <li class="sub-menu active">
+                <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                <ul class="sub" style="display: block">
+                    <li class="active"><a href="#">商品列表</a></li>
+                    <li><a href="#">入库商品</a></li>
+                    <li><a href="#">发布商品</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                <ul class="sub">
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <div class="select-area">
+                    <span>
+                        <label>商品名称：</label>
+                        <input type="text"/>
+                    </span>
+                    <span>
+                        <label>商品编号：</label>
+                        <input type="text"/>
+                    </span>
+                    <span>
+                        <label>商品分类：</label>
+                        <input type="text"/>
+                    </span>
+                    <span>
+                        <label>商品品牌：</label>
+                        <input type="text"/>
+                    </span>
+                    <span>
+                        <label>商品状态：</label>
+                        <select>
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                        </select>
+                    </span>
+                    <span class="last-line">
+                        <label>商品货号：</label>
+                        <input type="text"/>
+                    </span>
+                    <span class="last-line">
+                        <label>是否入库：</label>
+                        <select>
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                            <option value="">请选择</option>
+                        </select>
+                    </span>
+                    <div class="select-btn">
+                        <button class="btn btn-default mr5" type="button">重置</button>
+                        <button class="btn btn-success" type="button">查询</button>
+                    </div>
+                </div>
+                <div class="panel">
+                    <div class="panel-heading navy-blue">
+                        <ul class="tabnav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="javascript:">全部</a>
+                            </li>
+                            <li>
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">已上架</a>
+                            </li>
+                            <li>
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">已下架</a>
+                            </li>
+                            <li>
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">上架审核中</a>
+                            </li>
+                            <li>
+                                <i class="mark">1</i>
+                                <a data-toggle="tab" href="javascript:">下架审核中</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body whitebg pd20">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <select class="select-tab mr5">
+                                    <option value="">请选择</option>
+                                    <option value="">请选择</option>
+                                    <option value="">请选择</option>
+                                </select>
+                                <button class="btn btn-primary btn-sm" type="button">关联</button>
+                                <table class="table table-hover tab1-table">
+                                <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="table-check"/></th>
+                                    <th>商品图片</th>
+                                    <th>商品名称</th>
+                                    <th>品牌</th>
+                                    <th>商品编号</th>
+                                    <th>默认销售价</th>
+                                    <th>销售库存</th>
+                                    <th>是否入库</th>
+                                    <th>商品状态</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox" class="table-check"/></td>
+                                    <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                    <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                    <td>路易威登/LouisVuitton </td>
+                                    <td>4010200726</td>
+                                    <td>999.99</td>
+                                    <td>99</td>
+                                    <td>是</td>
+                                    <td>已上架</td>
+                                    <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-danger btn-sm unshelve mr5" href="javascript:;">申请下架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="table-check"/></td>
+                                    <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                    <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                    <td>路易威登/LouisVuitton </td>
+                                    <td>4010200726</td>
+                                    <td>999.99</td>
+                                    <td>99</td>
+                                    <td>是</td>
+                                    <td>已下架</td>
+                                    <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-danger btn-sm shelve mr5" href="javascript:;">申请上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                </tr>
+                                <tr class="success">
+                                    <td><input type="checkbox" class="table-check"/></td>
+                                    <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                    <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                    <td>路易威登/LouisVuitton </td>
+                                    <td>4010200726</td>
+                                    <td>999.99</td>
+                                    <td>-</td>
+                                    <td class="red">否</td>
+                                    <td class="red">上架待审核</td>
+                                    <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-warning btn-sm cancel-shelve mr5" href="javascript:;">取消上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="table-check"/></td>
+                                    <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                    <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                    <td>路易威登/LouisVuitton </td>
+                                    <td>4010200726</td>
+                                    <td>999.99</td>
+                                    <td>-</td>
+                                    <td class="red">否</td>
+                                    <td class="red">下架待审核</td>
+                                    <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-warning btn-sm cancel-shelve mr5" href="javascript:;">取消上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                                <div class="page-container">
+                                    <span class="pagination">
+                                        <em><a href="javascript:void(0)">«</a></em>
+                                        <em class="active"><a href="javascript:void(0)">1</a></em>
+                                        <em><a href="javascript:void(0)">2</a></em>
+                                        <em><a href="javascript:void(0)">3</a></em>
+                                        <em><a href="javascript:void(0)">4</a></em>
+                                        <em><a href="javascript:void(0)">5</a></em>
+                                        <em><a href="javascript:void(0)">...</a></em>
+                                        <em><a href="javascript:void(0)">»</a></em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <table class="table table-hover tab1-table">
+                                    <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="table-check"/></th>
+                                        <th>商品图片</th>
+                                        <th>商品名称</th>
+                                        <th>品牌</th>
+                                        <th>商品编号</th>
+                                        <th>默认销售价</th>
+                                        <th>销售库存</th>
+                                        <th>是否入库</th>
+                                        <th>商品状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="table-check"/></td>
+                                        <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                        <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                        <td>路易威登/LouisVuitton </td>
+                                        <td>4010200726</td>
+                                        <td>999.99</td>
+                                        <td>99</td>
+                                        <td>是</td>
+                                        <td>已上架</td>
+                                        <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-danger btn-sm unshelve mr5" href="javascript:;">申请下架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-container">
+                                    <span class="pagination">
+                                        <em><a href="javascript:void(0)">«</a></em>
+                                        <em class="active"><a href="javascript:void(0)">1</a></em>
+                                        <em><a href="javascript:void(0)">2</a></em>
+                                        <em><a href="javascript:void(0)">3</a></em>
+                                        <em><a href="javascript:void(0)">4</a></em>
+                                        <em><a href="javascript:void(0)">5</a></em>
+                                        <em><a href="javascript:void(0)">...</a></em>
+                                        <em><a href="javascript:void(0)">»</a></em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <table class="table table-hover tab1-table">
+                                    <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="table-check"/></th>
+                                        <th>商品图片</th>
+                                        <th>商品名称</th>
+                                        <th>品牌</th>
+                                        <th>商品编号</th>
+                                        <th>默认销售价</th>
+                                        <th>销售库存</th>
+                                        <th>是否入库</th>
+                                        <th>商品状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="table-check"/></td>
+                                        <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                        <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                        <td>路易威登/LouisVuitton </td>
+                                        <td>4010200726</td>
+                                        <td>999.99</td>
+                                        <td>99</td>
+                                        <td>是</td>
+                                        <td>已下架</td>
+                                        <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-danger btn-sm shelve mr5" href="javascript:;">申请上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-container">
+                                    <span class="pagination">
+                                        <em><a href="javascript:void(0)">«</a></em>
+                                        <em class="active"><a href="javascript:void(0)">1</a></em>
+                                        <em><a href="javascript:void(0)">2</a></em>
+                                        <em><a href="javascript:void(0)">3</a></em>
+                                        <em><a href="javascript:void(0)">4</a></em>
+                                        <em><a href="javascript:void(0)">5</a></em>
+                                        <em><a href="javascript:void(0)">...</a></em>
+                                        <em><a href="javascript:void(0)">»</a></em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <table class="table table-hover tab1-table">
+                                    <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="table-check"/></th>
+                                        <th>商品图片</th>
+                                        <th>商品名称</th>
+                                        <th>品牌</th>
+                                        <th>商品编号</th>
+                                        <th>默认销售价</th>
+                                        <th>销售库存</th>
+                                        <th>是否入库</th>
+                                        <th>商品状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="table-check"/></td>
+                                        <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                        <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                        <td>路易威登/LouisVuitton </td>
+                                        <td>4010200726</td>
+                                        <td>999.99</td>
+                                        <td>-</td>
+                                        <td class="red">否</td>
+                                        <td class="red">上架待审核</td>
+                                        <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-warning btn-sm cancel-shelve mr5" href="javascript:;">取消上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-container">
+                                    <span class="pagination">
+                                        <em><a href="javascript:void(0)">«</a></em>
+                                        <em class="active"><a href="javascript:void(0)">1</a></em>
+                                        <em><a href="javascript:void(0)">2</a></em>
+                                        <em><a href="javascript:void(0)">3</a></em>
+                                        <em><a href="javascript:void(0)">4</a></em>
+                                        <em><a href="javascript:void(0)">5</a></em>
+                                        <em><a href="javascript:void(0)">...</a></em>
+                                        <em><a href="javascript:void(0)">»</a></em>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <table class="table table-hover tab1-table">
+                                    <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="table-check"/></th>
+                                        <th>商品图片</th>
+                                        <th>商品名称</th>
+                                        <th>品牌</th>
+                                        <th>商品编号</th>
+                                        <th>默认销售价</th>
+                                        <th>销售库存</th>
+                                        <th>是否入库</th>
+                                        <th>商品状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="table-check"/></td>
+                                        <td><img src="../img/pro-pic.jpg" alt="" width="58" height="58" class="pro-img"/></td>
+                                        <td><a href="#" class="link">路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862</a></td>
+                                        <td>路易威登/LouisVuitton </td>
+                                        <td>4010200726</td>
+                                        <td>999.99</td>
+                                        <td>-</td>
+                                        <td class="red">否</td>
+                                        <td class="red">下架待审核</td>
+                                        <td class="btn-td"><a href="javascript:;" class="btn btn-success btn-sm mr5">浏览</a><a class="btn btn-warning btn-sm cancel-shelve mr5" href="javascript:;">取消上架</a><button class="btn btn-primary btn-sm" type="button">编辑</button></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="page-container">
+                                    <span class="pagination">
+                                        <em><a href="javascript:void(0)">«</a></em>
+                                        <em class="active"><a href="javascript:void(0)">1</a></em>
+                                        <em><a href="javascript:void(0)">2</a></em>
+                                        <em><a href="javascript:void(0)">3</a></em>
+                                        <em><a href="javascript:void(0)">4</a></em>
+                                        <em><a href="javascript:void(0)">5</a></em>
+                                        <em><a href="javascript:void(0)">...</a></em>
+                                        <em><a href="javascript:void(0)">»</a></em>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div class="prompt f1" id="probx" style="display: none;">
+            <div class="mainbody ac">
+                <a class="close_btn" title="关闭窗口" href="javascript:;">×</a>
+                <div class="txt">
+                    <i class="zzticon icon-l warning"></i>确定要申请上架吗？
+                    <p class="mt20">审核通过后，商品开始售卖！</p>
+                </div>
+                <div class="btnbox"><button class="btn btn-success" type="button">确 定</button>  <button class="btn btn-default easyDialogNoBtn" type="button">取 消</button></div>
+            </div>
+        </div>
+    <div class="prompt fl" id="probx2" style="display: none;">
+        <div class="mainbody ac">
+           <a href="javascript:;" title="关闭窗口" class="close_btn" >×</a>
+            <textarea placeholder="请输入申请下架原因！" style="width: 316px;" rows="5" class="form-control"></textarea>
+            <span class="f12">审核通过后，商品停止售卖。</span>
+           <div class="btnbox"><button type="button" class="btn btn-success mr5">确 定</button><button type="button" class="btn btn-default easyDialogNoBtn">取 消</button></div>
+        </div>
+    </div>
+    <div class="prompt fl" id="probx3" style="display: none;">
+        <div class="mainbody ac">
+           <a href="javascript:;" title="关闭窗口" class="close_btn" >×</a>
+              <div class="txt">
+                 <i class="zzticon icon-l warning"></i>确定要取消上/下架申请吗？
+              </div>
+              <div class="btnbox"><button type="button" class="btn btn-success mr5">确 定</button><button type="button" class="btn btn-default easyDialogNoBtn">取 消</button></div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/zzt.js"></script>
+    <script type="text/javascript" src="../js/easydialog.js"></script>
+    <script type="text/javascript">
+        $('.shelve').click(function(){
+            easyDialog.open({
+                container : 'probx',
+                fixed : true
+            });
+        });
+
+
+        $('.cancel-shelve').click(function(){
+            easyDialog.open({
+                container : 'probx3',
+                fixed : true
+            });
+        });
+        $('.unshelve').click(function(){
+            easyDialog.open({
+                container : 'probx2',
+                fixed : true
+            });
+        });
+        $(".close_btn,.easyDialogNoBtn").click(function(){
+            easyDialog.close();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "specifications": [
+    {
+      "code":"001",
+      "name":"颜色",
+      "values":[{"code": "0001", "name": "红色"},{"code": "0002", "name": "绿色"},{"code": "0003", "name": "黄色"},{"code": "0004", "name": "黑色"}]
+    },
+    {
+      "code":"002",
+      "name":"尺寸",
+      "values":[{
+        "code": "0001", "name": "S"},{"code": "0002", "name": "M"},{"code": "0003", "name": "L"}]
+    },
+    {
+      "code":"003",
+      "name":"段位",
+      "values":[{"code": "0001", "name": "段位一"},{"code": "0002", "name": "段位二"}]
+    },
+    {
+      "code":"004",
+      "name":"规格",
+      "values":[{"code": "0001", "name": "规格一"},{"code": "0002", "name": "规格二"},{"code": "0003", "name": "规格三"}]
+    }
+  ]
+}

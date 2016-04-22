@@ -1,0 +1,650 @@
+@charset "utf-8";
+@import "zzt.scss";
+.select-area {
+  //width: 97%;
+  margin:0 auto 1%;
+  background-color: $white;
+  @include borderRadius(4px);
+  padding: 2% 1%;
+  span{
+    display: inline-block;
+    margin-right: 2%;
+    width: 250px;
+    margin-bottom: 1%;
+  }
+  em{
+    display: inline-block;
+    width: 317px;
+    margin-right: 1.5%;
+    margin-bottom: 1%;
+    input{
+      width: 33%;
+    }
+  }
+  .last-line {
+    margin-bottom: 0;
+  }
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    line-height: 34px;
+  }
+
+}
+input, select {
+  display: inline-block;
+  vertical-align: middle;
+  width: 67%;
+  height: 28px;
+  line-height: 28px;
+  padding: 2px;
+  @include borderRadius(4px);
+  border: 1px solid $bordercolor;
+}
+select {
+  width: 70%;
+  padding: 8px;
+  height: auto;
+}
+.select-btn{
+  margin-top: 1%;
+  overflow: hidden;
+  text-align: center;
+  width: 83%;
+}
+.pro-img{
+  border: 1px solid #ddd;
+}
+.table-check{
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0 none;
+}
+.select-tab{
+  width: 147px;
+  //margin-right: 15px;
+}
+.tab1-table{
+  margin-top: 1%;
+}
+.page-container{
+  text-align: center;
+  margin: 0 auto;
+  em{
+    display: inline;
+    &:first-child{
+      a,span{
+        margin-left:0; @include bottomleftradius(4px); @include topleftradius(4px);
+      }
+    }
+    &:last-child{
+      a,span{
+        @include bottomrightradius(4px); @include toprighttradius(4px);
+      }
+    }
+  }
+  a{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #667fa0;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out 0s;
+    &:hover,&:focus{
+      background-color:#eee
+    }
+  }
+}
+.review-title{
+  color: #666;
+  font-size: 18px;
+  overflow: hidden;
+  margin: 20px 0;
+  a{
+    font-size: 12px;
+    margin-left: 0.7%;
+    &.look{
+      margin-left: 6%;
+    }
+  }
+  span{
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    //margin-left: 2%;
+  }
+}
+.reason{
+  width: 45%;
+}
+.sub-title{
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 1%;
+  margin-top: 0.5%;
+}
+.channel-title{
+  overflow: hidden;
+  margin-bottom: 15px;
+  b{
+    color: #666;
+    font-size: 18px;
+    line-height: 36px;
+    float: left;
+  }
+  span{
+    float: right;
+  }
+  a{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 1.2%;
+  }
+}
+.hint{
+  font-size: 12px;
+  color: #333;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+.star{
+  color: red;
+  font-style: normal;
+  vertical-align: middle;
+}
+table .channel-name{
+  text-align: left;
+  padding-left: 1.5%;
+}
+.channel2{
+  display: none;
+}
+.enter-wrapper{
+  padding-bottom: 1.5%;
+  border-bottom: 1px solid $bordercolor;
+}
+.select-label{
+  display: inline-block;
+  vertical-align: middle;
+}
+.related-pro{
+  position: relative;
+  margin: 1% 0 0;
+  .related-input{
+    width: 360px;
+    margin-right: 15px;
+  }
+}
+.reduce{
+  //width: 189px;
+  margin: 1% 0;
+  input{
+    width:100px;
+  }
+}
+.pro-msg{
+  margin-top: 1%;
+  margin-left: 4%;
+  width: 735px;
+  label{
+    display: inline-block;
+    //vertical-align: middle;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-style: normal;
+    //float: left;
+    vertical-align: top;
+    i{
+      width: 80px;
+      display: inline-block;
+      font-style: normal;
+      vertical-align: middle;
+      text-align: right;
+    }
+  }
+  p{
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 20px;
+  }
+  .long{
+    margin: 0;
+    width: 96.2%;
+  }
+}
+.desc-label{
+  display: inline-block;
+  vertical-align: top;
+  textarea{
+    @include borderRadius(4px);
+    border: 1px solid #e2e2e4;
+    height: 130px;
+    padding: 2px;
+    resize: none;
+    vertical-align: top;
+    width: 67%;
+  }
+}
+.disabled{
+  color: #ddd;
+}
+.format{
+  margin-top: 10px;
+  span{
+    float: left;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid $bordercolor;
+    margin-left: -1px;
+    margin-bottom: -1px;
+  }
+  .add{
+    margin-top: 10px;
+    float: left;
+    width: 199px;
+    margin-left: 0.7%;
+  }
+  .add-input{
+    width: 60%;
+    margin-left: 1%;
+  }
+}
+.format-table{
+  width: 30%;
+  border: 1px solid $bordercolor;
+}
+.pic-list{
+  overflow: hidden;
+  li{
+    width: 100px;
+    height: 100px;
+    border: 1px solid $bordercolor;
+    float: left;
+    margin: 0 10px 10px 0;
+    &.pic-add {
+      a{
+        color: #78cd51;
+        font-size: 60px;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: url("../img/add.png") no-repeat center center;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.cancel{
+  width: 25px;
+  height: 25px;
+  line-height: 22px;
+  top: 0;
+  right: 0;
+  background: red;
+  position: absolute;
+  img{
+    display: block;
+    margin: 5.5px auto 0;
+  }
+}
+.sort{
+  width: 12px;
+  height: 8px;
+  top: 46px;
+  position: absolute;
+}
+.sort-l{
+  background: url("../img/sort-arrow.png") no-repeat;
+  left: 2px;
+}
+.sort-r{
+  background: url("../img/sort-arrowr.png") no-repeat;
+  right: 2px;
+}
+.property{
+  .spec{
+    input{
+      width: 141px;
+    }
+  }
+}
+.checkgroup{
+  background-color: #f1f2f7;
+  border: 1px solid #e2e2e4;
+  display: inline-block;
+  //margin-right: 1%;
+  padding: 10px 10px 0;
+  vertical-align: top;
+  width: 125px;
+  label{
+    display: block;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    input{
+      margin-right: 10px;
+    }
+  }
+}
+.custom{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  input{
+    width: 120px;
+  }
+  &.edit{
+    background-color: $tablebg;
+    padding: 5px;
+    @include borderRadius(4px);
+  }
+}
+.x{
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+
+
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+.size-fillin{
+  width: 50%;
+}
+.file{
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  filter: alpha(opacity=0);
+  padding: 0;
+}
+.prompt{
+  .f12{
+    display: block;
+    text-align: left;
+    margin: 2% 0 3%;
+  }
+}
+#aa{
+  width: 487px;
+}
+.easyDialog_wrapper{
+  background-color: $white;
+}
+.look2-content{
+  padding: 5px 10px;
+}
+.encoded-edit{
+  display: none;
+  input{
+    width: 10%;
+    margin-right: 1%;
+  }
+}
+.mark{
+  width: 15px;
+  height: 15px;
+  line-height: 14px;
+  font-size: 12px;
+  border-radius: 100%;
+  background-color: $red;
+  color: $white;
+  position: absolute;
+  top: -7.5px;
+  right: 5%;
+  text-align: center;
+  font-style: normal;
+  z-index: 10;
+}
+.panel{
+  overflow: visible;
+}
+.pro-type{
+  white-space: nowrap;
+}
+.encoded-btn,.look{
+  display: inline-block;
+  line-height: 20px;
+}
+//#format-add,#custom-edit{
+//  display: none;
+//}
+.pro-list{
+  width: 364px;
+  height: 400px;
+  position: absolute;
+  display: none;
+  overflow: auto;
+  border: 1px solid $bordercolor;
+  border-top: 0 none;
+  top: 34px;
+  background-color: #fff;
+  li{
+    a{
+      display: block;
+      color: #333;
+      height: 30px;
+      line-height: 30px;
+      padding: 5px 10px;
+      &:hover{
+        background-color: $tablebg;
+      }
+    }
+  }
+}
+.btn-td{
+  white-space: nowrap;
+}
+//.check-label{
+//  //height: 20px;
+//  //line-height: 20px;
+//  display: inline-block;
+//  vertical-align: middle;
+//  margin-right: 20px;
+//}
+.check-element{
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.format-title{
+  display: block;
+  margin: 20px 0 10px 0;
+  font-size: 12px;
+}
+.table{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.order-title{
+  overflow: hidden;
+  li{
+    width: 14%;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .order-product{
+    width: 16%;
+  }
+}
+.order-table{
+  margin: 0 0 20px;
+  tr{
+    td{
+      width: 14%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .order-product{
+    width: 16%;
+    img{
+      float: left;
+    }
+    p{
+      width: 69%;
+      text-align: left;
+      float: left;
+      margin-left: 10px;
+    }
+  }
+  .rowspan{
+    border-left: 1px solid $bordercolor;
+  }
+  tr:hover{
+    td{
+      background: none;
+    }
+  }
+}
+.btn-block{
+  display: block;
+  margin: 0 auto 5px;
+  width: 60%;
+  font-size: 12px;
+}
+.alert-info{
+  .refund-title{
+    li{
+      width: 12%;
+    }
+  }
+}
+.refund-table{
+  tr{
+    td{
+      width: 12%;
+    }
+  }
+}
+.step-wrapper{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  span{
+    width: 10%;
+    height: 30px;
+    border-bottom: 2px solid #ff6c60;
+    float: left;
+  }
+  ul{
+    width: 80%;
+    overflow: hidden;
+    float: left;
+    font-size:0;
+  }
+  li{
+    width: 25%;
+    *width:24.98%;
+    float: left;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 2px solid #ff6c60;
+  }
+  i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    line-height: 13px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 12px;
+    background-color: #ff6c60;
+    font-style: normal;
+  }
+  .highlight{
+    border-color: #ff6c60;
+    i{
+      background-color: #ff6c60;
+    }
+    b{
+      color: #333;
+    }
+  }
+  b{
+    font-weight: normal;
+    margin-left: 5px;
+  }
+}
+.disabled{
+  color: $bordercolor;
+  i{
+    color: #fff;
+    background: $bordercolor;
+    border-color: $bordercolor;
+  }
+  b{
+    border-color: $bordercolor;
+  }
+  span{
+    border-color: $bordercolor;
+  }
+  li{
+    border-color: $bordercolor;
+  }
+}
+.state-title{
+  display: block;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #4393ba;
+  margin-bottom: 10px;
+}
+.state-p{
+  margin: 10px 0;
+}
+.order-money{
+  p{
+    text-align: right;
+    margin-bottom: 10px;
+  }
+}
+.deliver-fillin{
+  display: block;
+  overflow: hidden;
+  width: 80%;
+  margin: 20px auto 20px;
+  span{
+    width: 70px;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    float: left;
+  }
+  input,select{
+    float: right;
+  }
+}
+.disabledbg{
+  background-color: $bordercolor;
+}
+.prompt{
+  display: none;
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link href="../css/mct.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <!--头部内容-->
+        <div class="header whitebg clearfix">
+            <a href="#" class="logo"></a>
+            <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+        </div>
+
+        <!--左侧内容-->
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+                <li class="sub-menu active">
+                    <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                    <ul class="sub" style="display: block">
+                        <li class="active"><a href="#">商品列表</a></li>
+                        <li><a href="#">入库商品</a></li>
+                        <li><a href="#">发布商品</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                    <ul class="sub">
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                        <li><a href="#">订单列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><span class="arrow"></span><i class="icon-user"></i><span>商户信息</span></a>
+                    <ul class="sub">
+                        <li><a href="#">基本信息</a></li>
+                        <li><a href="#">修改密码</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--右侧主体内容-->
+        <div class="main-content">
+            <div class="main-wrapper">
+                <div class="wrapper">
+                    <!--右侧内容部分-->
+                        <div class="step-wrapper disabled">
+                            <span></span>
+                            <ul>
+                                <li class="highlight">
+                                    <i>1</i>
+                                    <b>买家已下单，待付款</b>
+                                </li>
+                                <li>
+                                    <i>2</i>
+                                    <b>买家已付款，待发货</b>
+                                </li>
+                                <li>
+                                    <i>3</i>
+                                    <b>已发货，待确认收货</b>
+                                </li>
+                                <li>
+                                    <i>4</i>
+                                    <b>已确认收货，交易完成</b>
+                                </li>
+                            </ul>
+                            <span></span>
+                        </div>
+                        <div class="alert alert-info mb10">
+                            <b class="state-title">当前订单状态： 买家已付款，等待发货</b>
+                            <p class="state-p">
+                                买家已于<span class="red">3天前（ 2014-03-09 12:23:30）</span>付款，请尽快完成发货
+                            </p>
+                            <button class="btn btn-info deliver-btn" type="button">发货</button>
+                            <p class="state-p">
+                                提示：1、请先录入物流单号，再发出货
+                            </p>
+                        </div>
+                        <div class="alert alert-info mb10">
+                            <b class="state-title">当前订单状态： 已发货，等待买家确认收货</b>
+                            <p class="state-p">
+                                买家（userName）还<span class="red">有9天23小时20分</span>来完成确认收货
+                            </p>
+                            <p class="state-p">
+                                如果期间买家没有确认收货， 交易将自动完成
+                            </p>
+                            <p class="state-p">
+                                提示：1、请先录入物流单号，再发出货
+                            </p>
+                        </div>
+                        <div class="alert alert-info mb10">
+                            <b class="state-title">当前订单状态： 买家已经确认收货 交易完成</b>
+                            <p class="state-p">
+                                买家（userName）于<span class="red">2013-03-09 12:23:30</span>确认收货 交易完成
+                            </p>
+                        </div>
+                        <div class="alert alert-info mb10">
+                            <b class="state-title">当前订单状态： 买家已付款，等待发货</b>
+                            <p class="state-p">
+                                买家已于<span class="red">3天前（ 2014-03-09 12:23:30）</span>付款，请尽快发货
+                            </p>
+                        </div>
+                        <div class="whitebg mt10 pd20">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>订单编号</th>
+                                        <th>下单时间</th>
+                                        <th>支付方式</th>
+                                        <th>付款时间</th>
+                                        <th>订单状态</th>
+                                        <th>发货时间</th>
+                                        <th>买家</th>
+                                        <th>确认收货时间</th>
+                                        <th>买家备注</th>
+                                        <th>收货信息</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="#" class="link">D234234</a></td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>支付宝</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>待发货</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>13312345678</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>无</td>
+                                        <td>王晓磊   131****1261   上海市上海市浦东新区济阳一村－济阳路95弄45号101室</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="link">D234234</a></td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>支付宝</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>待发货</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>13312345678</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>无</td>
+                                        <td>王晓磊   131****1261   上海市上海市浦东新区济阳一村－济阳路95弄45号101室</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="link">D234234</a></td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>支付宝</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>待发货</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>13312345678</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>无</td>
+                                        <td>王晓磊   131****1261   上海市上海市浦东新区济阳一村－济阳路95弄45号101室</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="link">D234234</a></td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>支付宝</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>待发货</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>13312345678</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>无</td>
+                                        <td>王晓磊   131****1261   上海市上海市浦东新区济阳一村－济阳路95弄45号101室</td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#" class="link">D234234</a></td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>支付宝</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>待发货</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>13312345678</td>
+                                        <td>2014-03-09 12:23:30</td>
+                                        <td>无</td>
+                                        <td>王晓磊   131****1261   上海市上海市浦东新区济阳一村－济阳路95弄45号101室</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="alert alert-danger mt10">
+                            物流公司：E特快    运单号：EL211370002HK
+                        </div>
+                        <div class="panel mt10">
+                            <div class="panel-heading navy-blue">
+                                <ul class="tabnav nav-tabs">
+                                    <li class="active"><a href="javascript:" data-toggle="tab">商品清单</a></li>
+                                </ul>
+                            </div>
+                            <div class="panel-body whitebg pd20">
+                                <div class="tab-content">
+                                    <div class="tab-pane active">
+                                        <table class="table table-hover order-table refund-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        商品
+                                                    </th>
+                                                    <th>
+                                                        单价
+                                                    </th>
+                                                    <th>
+                                                        数量
+                                                    </th>
+                                                    <th>
+                                                        小计
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="order-product">
+                                                        <img width="20%" alt="" src="../img/pro-pic.jpg" class="pro-img mr10">
+                                                        <p>
+                                                            路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862<br>
+                                                            颜色：蓝色L号<br>
+                                                            尺寸：<br>
+                                                            税率：10%
+                                                        </p>
+                                                    </td>
+                                                    <td>2000</td>
+                                                    <td>1</td>
+                                                    <td>6000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="order-product">
+                                                        <img width="20%" alt="" src="../img/pro-pic.jpg" class="pro-img mr10">
+                                                        <p>
+                                                            路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862<br>
+                                                            颜色：蓝色L号<br>
+                                                            尺寸：<br>
+                                                            税率：10%
+                                                        </p>
+                                                    </td>
+                                                    <td>2000</td>
+                                                    <td>1</td>
+                                                    <td>6000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="order-product">
+                                                        <img width="20%" alt="" src="../img/pro-pic.jpg" class="pro-img mr10">
+                                                        <p>
+                                                            路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862<br>
+                                                            颜色：蓝色L号<br>
+                                                            尺寸：<br>
+                                                            税率：10%
+                                                        </p>
+                                                    </td>
+                                                    <td>2000</td>
+                                                    <td>1</td>
+                                                    <td>6000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="order-product">
+                                                        <img width="20%" alt="" src="../img/pro-pic.jpg" class="pro-img mr10">
+                                                        <p>
+                                                            路易威登LouisVuitton LV包包正品女包新款手提单肩包 M40862<br>
+                                                            颜色：蓝色L号<br>
+                                                            尺寸：<br>
+                                                            税率：10%
+                                                        </p>
+                                                    </td>
+                                                    <td>2000</td>
+                                                    <td>1</td>
+                                                    <td>6000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="order-money">
+                                    <p>
+                                        商品总金额：<b class="red">3000.00</b>元
+                                    </p>
+                                    <p>
+                                        优惠券减免：<b class="red">-500.00</b>元
+                                    </p>
+                                    <p>
+                                        专场活动减免：<b class="red">-200.00</b>元
+                                    </p>
+                                    <p>
+                                        税额：<b class="red">70.00</b>元
+                                    </p>
+                                    <p>
+                                        余额减免：<b class="red">2070.00</b>元
+                                    </p>
+                                    <p>
+                                        运费：<b class="red">0.00</b>元
+                                    </p>
+                                    <p>
+                                        实付款：<b class="red">2070.00</b>元
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    <!--右侧内容部分end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prompt" id="deliver">
+        <div class="mainbody ac">
+            <a class="close_btn" title="关闭窗口" href="javascript:;">×</a>
+            <label class="deliver-fillin">
+               <span>快递公司：</span>
+               <select>
+                  <option>请选择</option>
+                  <option>请选择</option>
+                  <option>请选择</option>
+                  <option>请选择</option>
+               </select>
+            </label>
+            <label class="deliver-fillin">
+               <span>运单号：</span>
+               <input type="text"/>
+            </label>
+            <div class="btnbox"><button class="btn btn-success mr5" type="button">确 定</button>  <button class="btn btn-default easyDialogNoBtn" type="button">取 消</button></div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/zzt.js"></script>
+    <script type="text/javascript" src="../js/easydialog.js"></script>
+    <script type="text/javascript">
+       $(".deliver-btn").click(function(){
+           easyDialog.open({
+               container : 'deliver',
+               fixed : true
+           });
+       });
+       $(".close_btn,.easyDialogNoBtn").click(function(){
+           easyDialog.close();
+       })
+    </script>
+  </body>
+</html>

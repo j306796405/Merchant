@@ -1,0 +1,414 @@
+@charset "utf-8";
+@import "public.scss";
+@import "color.scss";
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 按钮样式 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+//按钮样式
+.btn {
+  display: inline-block; padding: 6px 30px;  margin-bottom: 0; font-size: 14px; font-weight: normal; line-height: 1.428571429; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; border: 1px solid transparent;  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; @include borderRadius(4px); color: $white; @include transition(.2s);
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+//大按钮
+.btn-lg {
+  padding: 10px 20px; font-size: 18px; line-height: 1.33; @include borderRadius(6px);
+}
+
+//小按钮
+.btn-sm, .btn-xs {
+  padding: 5px 10px; font-size: 12px; line-height: 1.6; @include borderRadius(3px);
+}
+
+//block按钮
+.btn-block {
+  display: block; width: 100%; padding-right: 0; padding-left: 0;
+}
+
+//按钮颜色
+.btn-default {
+  background-color:  $white; border-color: $bordercolor; color: $default;
+  &:hover,&:focus, &:active{
+    border-color: #d3d3d3;
+  }
+}
+
+.btn-primary {
+  background-color: #41cac0; border-color: #41cac0;
+  &:hover,&:focus, &:active{
+    background-color: #39b2a9; border-color: #39b2a9;
+  }
+}
+
+//成功
+.btn-success {
+  background-color: $green; border-color: $green;
+  &:hover,&:focus, &:active{
+    background-color: #6dbb4a; border-color: #6dbb4a;
+  }
+}
+
+//信息
+.btn-info {
+  background-color: #58c9f3; border-color: #58c9f3;
+  &:hover,&:focus, &:active{
+    background-color: #53BEE6; border-color: #53BEE6;
+  }
+}
+
+//警告
+.btn-warning {
+  background-color: #f1c500; border-color: #f1c500;
+  &:hover,&:focus, &:active{
+    background-color: #e4ba00; border-color: #e4ba00;
+  }
+}
+
+//危险
+.btn-danger {
+  background-color: #ff6c60; border-color: #ff6c60;
+  &:hover,&:focus, &:active{
+    background-color: #ec6459; border-color: #ec6459;
+  }
+}
+
+//zzt主体色
+.btn-zzt{
+  background-color: #fa4182; border-color: #fa4182;
+  &:hover,&:focus, &:active{
+    background-color: #fa4182; border-color: #fa4182;
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 分页效果 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+//分页效果
+.pagination{
+  display:inline-block; padding-left:0; margin:20px 0; @include borderRadius(4px);
+  li{
+    display:inline;
+    a,span{
+      position:relative; float:left; padding:6px 12px; margin-left:-1px; line-height:1.428571429; text-decoration:none; background-color:#fff; border:1px solid #ddd; color: #667fa0; @include transition(.2s);
+      &:hover,&:focus{
+        background-color:#eee
+      }
+    }
+    &:first-child{
+      a,span{
+        margin-left:0; @include bottomleftradius(4px); @include topleftradius(4px);
+      }
+    }
+    &:last-child{
+      a,span{
+        @include bottomrightradius(4px); @include toprighttradius(4px);
+      }
+    }
+  }
+  //高亮
+  .active{
+    a,span,a:hover,a:focus,span:focus{
+      z-index:2; color:#fff; cursor:default; background-color:#41cac0; border-color:#41cac0
+    }
+  }
+  .disabled{
+    span,a,a:hover,a:focus{
+      color:#999; cursor:not-allowed; background-color:#fff; border-color:#ddd
+    }
+  }
+}
+//大尺寸分页
+.pagination-lg{
+  li{
+    a,span{
+      padding:10px 16px; font-size:18px
+    }
+    &:first-child{
+      a,span{
+        @include bottomleftradius(6px); @include topleftradius(6px);
+      }
+    }
+    &:last-child{
+      a,span{
+        @include bottomrightradius(6px); @include toprighttradius(6px);
+      }
+    }
+  }
+}
+//小尺寸分页
+.pagination-sm{
+  li{
+    a,span{
+      padding:5px 10px; font-size:12px
+    }
+    &:first-child{
+      a,span{
+        @include bottomleftradius(3px); @include topleftradius(3px);
+      }
+    }
+    &:last-child{
+      a,span{
+        @include bottomrightradius(3px); @include toprighttradius(3px);
+      }
+    }
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 提示信息 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+.alert{
+  padding:15px; border:1px solid transparent; @include borderRadius(4px);
+  h4{
+    margin-top:0; color:inherit
+  }
+  b{
+    font-size: 14px;
+  }
+}
+//成功
+.alert-success{
+  color:$successfont; background-color:$success; border-color:#d6e9c6
+}
+
+//信息
+.alert-info{
+  color:$infofont; background-color:$info; border-color:#bce8f1;
+  .alert-link{
+    color:#2d6987
+  }
+}
+
+//警告
+.alert-warning{
+  color:$warningfont; background-color:$warning; border-color:#fbeed5
+}
+
+//危险
+.alert-danger{
+  color:$dangerfont; background-color:$danger; border-color:#eed3d7
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 选择（select）美化 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.btn-white {
+  box-shadow: none !important;
+}
+
+.btn-white {
+  background-clip: padding-box; background-color: $white; border-color:$bordercolor; box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05) inset; color: $default;
+}
+
+.btn-grey{
+  background-clip: padding-box; background-color:#f1f2f7; border-color:$bordercolor; box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05) inset; color: $default;
+}
+
+.caret {
+  display: inline-block; width: 0; height: 0; margin-left: 2px; vertical-align: middle; border-top: 4px solid #000; border-right: 4px solid transparent; border-bottom: 0 dotted; border-left: 4px solid transparent; content: "";
+}
+
+//下拉框样式，默认隐藏
+.dropdown-menu {
+  position: absolute; top: 100%; left: 0; z-index: 1000; display: none; float: left;  min-width: 160px; padding: 5px 0; margin: 2px 0 0; font-size: 14px; list-style: none; background-color: $white; border: 1px solid #ccc; border: 1px solid rgba(0,0,0,0.15); border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175); box-shadow: 0 6px 12px rgba(0,0,0,0.175); background-clip: padding-box;
+  .divider {
+    height: 1px; margin: 9px 0; overflow: hidden; background-color: #e5e5e5;
+  }
+  li{
+    a {
+      display: block; padding: 3px 20px; clear: both; font-weight: normal; line-height: 1.428571429; color: $default; white-space: nowrap;
+      &:hover,&a:focus{
+        text-decoration:none; background-color:#eee;
+      }
+    }
+  }
+}
+
+//添加open样式，显示下拉框
+.open>.dropdown-menu {
+  display: block;
+}
+
+//dropup 的下拉框显示
+.dropup .dropdown-menu{
+  top: auto; bottom: 100%; margin-bottom: 1px;
+}
+
+//选择按钮组名称
+.btn-group{
+  position:relative; display:inline-block; vertical-align:middle; *display:inline;
+  .btn{
+    position: relative; float: left; min-width: 170px; text-align: left;
+    &:first-child {
+      margin-left: 0;
+    }
+    .caret {
+      margin-left: 0;
+    }
+  }
+  .dropdown-toggle{
+    min-width: 1px; height: 100%;
+  }
+  .btn+.btn,.btn+.btn-group,.btn-group+.btn,.btn-group+.btn-group {
+    margin-left: -1px;
+  }
+  .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;  border-bottom-right-radius: 0;
+  }
+  .btn:last-child:not(:first-child),.dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0; border-top-left-radius: 0;
+  }
+  .btn+.dropdown-toggle {
+    padding-right: 8px; padding-left: 8px;
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = Table 表格 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+.table{
+  border-collapse:collapse; width:100%;
+  .link{
+    color: $default;
+    &:hover{
+      color: #ff6c60;
+    }
+  }
+  td,th{
+    background-color:#fff; padding:12px 8px; line-height:1.428571429; vertical-align:middle; border-bottom:1px solid $bordercolor; text-align: center;
+    &.success{
+      &:hover{
+        background-color:#d0e9c6; border-color:#c9e2b3
+      }
+    }
+    &.danger{
+      &:hover{
+        background-color:#ebcccc; border-color:#e6c1c7
+      }
+    }
+    &.warning{
+      &:hover{
+        background-color:#faf2cc; border-color:#f8e5be
+      }
+    }
+  }
+  thead{
+    th{
+       background: #f1f2f7; font-size: 13px; color: #2a3542; white-space: nowrap;
+    }
+  }
+  .table{
+    background-color:#fff
+  }
+  .active{
+    th,td{
+      background-color:#f5f5f5
+    }
+  }
+  .success{
+    th,td{
+      background-color:#dff0d8; border-color:#d6e9c6
+    }
+  }
+  .danger{
+    th,td{
+      background-color:#f2dede; border-color:#eed3d7
+    }
+  }
+  .warning{
+    th,td{
+      background-color:#fcf8e3; border-color:#fbeed5
+    }
+  }
+}
+
+.table-bordered{
+  border:1px solid $bordercolor;
+  th,td{
+    border:1px solid $bordercolor; border-bottom-width:1px
+  }
+}
+
+.table-condensed{
+  td,th{
+    padding:8px 5px
+  }
+}
+
+.table-striped{
+  tbody{
+    tr:nth-child(odd){
+      td,th{
+        background-color:#f1f2f7
+      }
+    }
+  }
+}
+
+.table-hover{
+  tr{
+    &:hover{
+      td,th{
+        background-color:#f1f2f7
+      }
+    }
+    &.success{
+      &:hover{
+        td,th {
+          background-color:#d0e9c6; border-color:#c9e2b3
+        }
+      }
+    }
+    &.danger{
+      &:hover{
+        td,th {
+          background-color:#ebcccc; border-color:#e6c1c7
+        }
+      }
+    }
+    &.warning{
+      &:hover{
+        td,th {
+          background-color:#faf2cc; border-color:#f8e5be
+        }
+      }
+    }
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = Tab 选项卡 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+.panel{
+  @include borderRadius(4px); overflow: hidden;
+}
+.panel-heading{
+  height: 36px; line-height: 36px; width: 100%; display: block;
+}
+.navy-blue{
+  background: #7087a3; color: $white;
+}
+
+.tabnav{
+  li{
+    float: left; position: relative; display: block; font-size: 14px;
+    a{
+      color: $white; background: #7087a3; text-decoration: none; padding: 0 30px; position: relative; display: block; height: 100%;
+      &:hover{
+        color: #7087a3; background: $white;
+      }
+    }
+    &.active{
+      a{
+        color: #7087a3; background: $white;
+      }
+    }
+    &.on{
+      a{
+        color: $white; background: #7087a3;
+      }
+    }
+  }
+  &:after{
+    content:"."; height:0; visibility:hidden; display:block; clear:both; font-size:0; line-height:0
+  }
+}
+.tab-pane{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

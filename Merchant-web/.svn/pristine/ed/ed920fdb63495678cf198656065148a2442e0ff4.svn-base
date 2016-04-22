@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link rel="stylesheet" href="../css/easydialog.css"/>
+    <link href="../css/mine.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+            <li class="sub-menu active">
+                <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                <ul class="sub" style="display: block">
+                    <li class="active"><a href="#">商品列表</a></li>
+                    <li><a href="#">入库商品</a></li>
+                    <li><a href="#">发布商品</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                <ul class="sub">
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+                <h1 class="channel-title"><b>发布销售商品</b><a href="商品审核记录.html">商品审核记录</a><span><button class="btn btn-primary" type="button">保存商品</button>&nbsp;&nbsp;<button
+                        class="btn btn-success" type="button">预览
+                </button>&nbsp;&nbsp;<button class="btn btn-info" type="button">复制商品</button></span></h1>
+                <br/>
+
+                <div class="panel">
+                    <div class="panel-heading navy-blue">
+                        <ul class="tabnav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="javascript:">商品基础信息</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="javascript:">商品价格/库存/渠道</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-body whitebg pd20">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <div class="enter-wrapper">
+                                    <h1 class="review-title">商品是否已入喆兔仓？<span
+                                            class="hint">（商品保存后将无法修改是否入仓选项）<em class="star">*</em></span></h1>
+                                    <br/>
+                                    <input type="radio" disabled="disabled" class="table-check" name="enter"/>&nbsp;&nbsp;<font
+                                        class="disabled">是</font>&nbsp;&nbsp;<input
+                                        type="radio" class="table-check" name="enter"
+                                        disabled="disabled"/>&nbsp;&nbsp;<font class="disabled">否</font>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+
+                                    <h1 class="review-title">关联采购商品</h1>
+                                    <br/>
+                                    <label for="select-tab" class="select-label"><em
+                                            class="star">*</em>请选择关联商品数量：</label>
+                                    <select class="select-tab" id="select-tab">
+                                        <option value="">请选择</option>
+                                        <option value="">请选择</option>
+                                        <option value="">请选择</option>
+                                    </select>&nbsp;&nbsp;
+                                    <button type="button" class="btn btn-primary btn-sm">确定</button>
+                                    <div class="related-pro">
+                                        <div class="pro-list">
+                                           <ul>
+                                               <li>
+                                                   <a href="javascript:void(0)">哈哈哈哈哈哈哈哈哈哈哈</a>
+                                               </li>
+                                               <li>
+                                                   <a href="javascript:void(0)">呵呵呵呵呵呵呵呵</a>
+                                               </li>
+                                               <li>
+                                                   <a href="javascript:void(0)">哈哈哈哈哈哈哈哈哈哈哈</a>
+                                               </li>
+                                               <li>
+                                                   <a href="javascript:void(0)">哈哈哈哈哈哈哈哈哈哈哈</a>
+                                               </li>
+                                               <li>
+                                                   <a href="javascript:void(0)">哈哈哈哈哈哈哈哈哈哈哈</a>
+                                               </li>
+                                           </ul>
+                                        </div>
+                                        <input type="text" class="related-input"/>&nbsp;&nbsp;
+                                        <button type="button" class="btn btn-primary btn-sm">关联</button>
+                                        <span class="hint">（请从查询列表中选中需要关联的采购商品，再点击关联按钮进行关联）</span><br/>
+
+                                        <p class="reduce">
+                                            <label class="select-label" for="num"><em class="star">*</em>库存扣减数量：</label>
+                                            <input type="text" id="num" disabled="disabled"/>
+                                        </p>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th class="channel-name">采购商品名称</th>
+                                                <th>采购商品ID</th>
+                                                <th>仓库</th>
+                                                <th>采购价</th>
+                                                <th>剩余库存</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                                <td>AA001</td>
+                                                <td>杭州仓</td>
+                                                <td>1000.00</td>
+                                                <td>1000</td>
+                                                <td><a href="javascript:;" class="btn btn-warning btn-sm">取消关联</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                                <td>AA001</td>
+                                                <td>杭州仓</td>
+                                                <td>1000.00</td>
+                                                <td>1000</td>
+                                                <td><a href="javascript:;" class="btn btn-warning btn-sm">取消关联</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                                <td>AA001</td>
+                                                <td>杭州仓</td>
+                                                <td>1000.00</td>
+                                                <td>1000</td>
+                                                <td><a href="javascript:;" class="btn btn-warning btn-sm">取消关联</a></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <br/>
+                                        <input type="radio" class="table-check" name="enter"/>&nbsp;&nbsp;选择此采购商品的分类作为销售分类
+                                    </div>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+
+                                    <h1 class="review-title">商品基本信息</h1>
+
+                                    <form class="pro-msg">
+                                        <p class="mt20">
+                                            <label for="classify">商品分类：</label>
+                                            <select class="select-tab" id="classify">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <select class="select-tab">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <select class="select-tab">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </p>
+                                        <p class="mt20">
+                                            <label for="brand-name">品牌名称：</label>
+                                            <select class="select-tab" id="brand-name">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </p>
+                                        <p class="mt20">
+                                            <label for="pro-name">品牌名称：</label>
+                                            <input type="text" id="pro-name"/>
+                                        </p>
+
+                                        <p class="mt20">
+                                            <label for="desc" class="desc-label">商品卖点：</label>
+                                            <textarea id="desc"></textarea>
+                                        </p>
+
+                                        <p class="mt20">
+                                            <label>商品编号：</label>
+                                            <span>9500650755</span>
+                                        </p>
+                                    </form>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+
+                                    <h1 class="review-title">商品规格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                            class="f12"><em class="encoded">规格组编码：<font class="red">12167161216716</font></em><em class="encoded-edit">规格组编码：<input type="text"/><button class="btn btn-success btn-sm" type="button">确定</button>&nbsp;&nbsp;<button class="btn btn-warning btn-sm" type="button">取消</button></em><a
+                                            href="javascript:void(0)" class="encoded-btn">编辑</a><a href="javascript:void(0)" class="look look1" id="look1">查看相同规格组编码商品</a><a href="javascript:void(0)" id="look2" class="look look2">什么是规格组编码？</a></span></h1><br/>
+                                    <input type="checkbox" class="table-check"/>&nbsp;&nbsp;颜色&nbsp;&nbsp;<input
+                                        type="checkbox" class="table-check"/>&nbsp;&nbsp;尺寸&nbsp;&nbsp;<input
+                                        type="checkbox" class="table-check"/>&nbsp;&nbsp;段位&nbsp;&nbsp;<input
+                                        type="checkbox" class="table-check"/>&nbsp;&nbsp;规格&nbsp;&nbsp;<br/><br/>
+                                    <span class="f12">颜色</span>
+                                    <div class="format mt10 clearfix">
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                             红色
+                                        </span>
+                                        <span>
+                                           <input type="radio" name="size" class="table-check"/>
+                                           红色
+                                        </span>
+                                        <span>
+                                           <input type="radio" name="size" class="table-check"/>
+                                           红色
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                             红色
+                                        </span>
+                                        <span>
+                                           <input type="radio" name="size" class="table-check"/>
+                                           红色
+                                        </span>
+                                        <span>
+                                           <input type="radio" name="size" class="table-check"/>
+                                           红色
+                                        </span>
+                                        <span id="format-add">
+                                            <input type="radio" name="size" class="table-check"/>
+                                            <input type="text" class="size-fillin"/>
+                                            <a href="javascript:void(0)" class="x">X</a>
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            <input type="text" class="size-fillin"/>
+                                            <a href="javascript:void(0)" class="x">X</a>
+                                        </span>
+                                        <em class="add">
+                                            <input type="text" class="add-input" name="format"/>
+                                            <a class="btn btn-success btn-sm" href="javascript:;">+添加</a>
+                                        </em>
+                                    </div>
+                                    <br/>
+                                    <span class="f12">尺寸</span>
+
+                                    <div class="format mt10 clearfix">
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            S
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            L
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            XL
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            XXL
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="size" class="table-check"/>
+                                            <input type="text" class="size-fillin"/>
+                                            <a href="javascript:void(0)" class="x">X</a>
+                                        </span>
+                                        <em class="add">
+                                            <input type="text" class="add-input" name="size"/>
+                                            <a class="btn btn-success btn-sm" href="javascript:;">+添加</a>
+                                        </em>
+                                    </div>
+                                    <br/>
+                                    <p class="hint">（创建商品时一次只能创建一种规格，如需创建多种规格请使用复制商品功能。如：某衣服有红色S码、红色L码、黄色S码、黄色L码
+                                        四种规格，需先创建其中一种规格，如红色S码，然后再使用复制功能创建其它三种规格。）</p>
+                                    <br/>
+                                    <span class="f12">商品规格</span>
+                                    <br/>
+                                    <br/>
+                                    <table class="table table-hover format-table">
+                                        <thead>
+                                        <tr>
+                                            <th>颜色</th>
+                                            <th>尺寸</th>
+                                            <th>货号</th>
+                                            <th>条形码</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>红色</td>
+                                            <td>S</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+
+                                    <h1 class="review-title">商品图片</h1>
+                                    <br/>
+                                    <ul class="pic-list">
+                                        <li class="rel">
+                                            <img src="../img/pro-pic.jpg" width="100%" alt=""/>
+                                            <a href="javascript:void(0)" class="cancel disabledbg abs">
+                                                <img src="../img/cancel.png" alt=""/>
+                                            </a>
+                                            <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                                            <a href="javascript:void(0)" class="sort sort-r abs"></a>
+                                        </li>
+                                        <li class="rel">
+                                            <img src="../img/pro-pic.jpg" width="100%" alt=""/>
+                                            <a href="javascript:void(0)" class="cancel abs">
+                                                <img src="../img/cancel.png" alt=""/>
+                                            </a>
+                                            <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                                            <a href="javascript:void(0)" class="sort sort-r abs"></a>
+                                        </li>
+                                        <li class="rel">
+                                            <img src="../img/pro-pic.jpg" width="100%" alt=""/>
+                                            <a href="javascript:void(0)" class="cancel abs">
+                                                <img src="../img/cancel.png" alt=""/>
+                                            </a>
+                                            <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                                            <a href="javascript:void(0)" class="sort sort-r abs"></a>
+                                        </li>
+                                        <li class="rel">
+                                            <img src="../img/pro-pic.jpg" width="100%" alt=""/>
+                                            <a href="javascript:void(0)" class="cancel abs">
+                                                <img src="../img/cancel.png" alt=""/>
+                                            </a>
+                                            <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                                            <a href="javascript:void(0)" class="sort sort-r abs"></a>
+                                        </li>
+                                        <li class="rel">
+                                            <img src="../img/pro-pic.jpg" width="100%" alt=""/>
+                                            <a href="javascript:void(0)" class="cancel abs">
+                                                <img src="../img/cancel.png" alt=""/>
+                                            </a>
+                                            <a href="javascript:void(0)" class="sort sort-l abs"></a>
+                                            <a href="javascript:void(0)" class="sort sort-r abs"></a>
+                                        </li>
+                                        <li class="pic-add rel">
+                                            <input type="file" class="file" multiple="multiple"/>
+                                            <a href="javascript:void(0)">
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <p class="hint">上传图片最大500K；长宽为1:1(正方形)；最多可上传8张，最少须上传1张</p>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br>
+
+                                    <h1 class="review-title">商品属性</h1>
+
+                                    <form class="pro-msg property">
+                                        <p class="mt20">
+                                            <label for="origin">商品产地：</label>
+                                            <select class="select-tab" id="origin">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="people">人群：</label>
+                                            <select class="select-tab" id="people">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="style">款式：</label>
+                                            <select class="select-tab" id="style">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </p>
+                                        <p class="mt20">
+                                            <label for="date">出厂日期：</label>
+                                            <select class="select-tab" id="date">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="season">季节：</label>
+                                            <select class="select-tab" id="season">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="classification">分类：</label>
+                                            <select class="select-tab" id="classification">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </p>
+                                        <p class="mt20">
+                                            <label for="material">材质：</label>
+                                            <select class="select-tab" id="material">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="lx">领型：</label>
+                                            <select class="select-tab" id="lx">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                            <label for="thickness">厚度：</label>
+                                            <select class="select-tab" id="thickness">
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                                <option value="">请选择</option>
+                                            </select>
+                                        </p>
+                                        <p class="mt20 spec">
+                                            <label for="pieces"><em class="star">*</em>纸尿裤片数：</label>
+                                            <input type="text" id="pieces"/>
+                                            <label for="feature"><em class="star">*</em>商品特色：</label>
+                                            <input type="text" id="feature"/>
+                                        </p>
+
+                                        <div class="mt20">
+                                            <label>风格：</label>
+                                            <span class="checkgroup">
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    休闲
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    日韩
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    淑女
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    欧美
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    OL通勤
+                                                </em>
+                                            </span>
+                                            <label>季节：</label>
+                                            <span class="checkgroup">
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    春季
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    夏季
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    秋季
+                                                </em>
+                                                <em>
+                                                    <input type="checkbox" class="table-check"/>
+                                                    冬季
+                                                </em>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+                                    <h1 class="review-title">商品参数&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" class="parameter-btn">自定义参数</a>
+                                    </h1>
+                                    <br/>
+                                    <span class="custom">
+                                        <label>型号：</label>
+                                        <input type="text"/>
+                                    </span>
+                                    <span class="custom">
+                                        <label>光学变焦倍数：</label>
+                                        <input type="text"/>
+                                    </span>
+                                    <span class="custom">
+                                        <label>总像素：</label>
+                                        <input type="text"/>
+                                    </span>
+                                    <span class="custom edit" id="custom-edit">
+                                        <input type="text" placeholder="自定义参数"/>
+                                        <input type="text" placeholder="自定义参数值"/>
+                                        <a href="javascript:void(0)" class="x">X</a>
+                                    </span>
+                                </div>
+                                <div class="enter-wrapper">
+                                    <br/>
+                                    <h1 class="review-title">商品详情</h1>
+                                    <br/>
+                                    <div class="editor">
+                                        <img src="../img/edit.jpg" alt="" width="100%"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane">
+                                <div class="channel1">
+                                    <h1 class="review-title">商品价格/库存<a class="channel-link" rel="0"
+                                                                       href="javascript:void(0)">分渠道设置价格/库存</a>
+                                    </h1>
+                                    <h4 class="sub-title">统一设置库存/价格</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>市场价（元）</th>
+                                            <th>销售价（元）</th>
+                                            <th>销售库存</th>
+                                            <th>限购数量</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <h4 class="sub-title">已关联的采购商品 采购价 / 库存数量</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">采购商品名称</th>
+                                            <th>采购商品ID</th>
+                                            <th>采购价（元）</th>
+                                            <th>剩余库存</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="channel2">
+                                    <h1 class="review-title">商品价格/库存<a rel="1" class="channel-link"
+                                                                       href="javascript:void(0)">统一设置库存/价格</a>
+                                    </h1>
+                                    <h4 class="sub-title">分渠道设置库存/价格</h4>
+                                    <input type="checkbox" class="table-check"/>&nbsp;&nbsp;喆喆兔-PC&nbsp;&nbsp;<input
+                                        type="checkbox" class="table-check"/>&nbsp;&nbsp;喆喆兔-APP&nbsp;&nbsp;<input
+                                        type="checkbox" class="table-check"/>&nbsp;&nbsp;喆喆兔-MOBILE
+                                    <br/>
+                                    <br/>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">渠道</th>
+                                            <th>市场价（元）</th>
+                                            <th>售价（元）</th>
+                                            <th>渠道库存</th>
+                                            <th>限购（0为不限购）</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-PC</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-APP</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name">喆喆兔-MOBILE</td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                            <td><input type="text"/></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="hint">（提示：分渠道设置库存后，各渠道之间的库存是独立的。）</p>
+                                    <h4 class="sub-title">已关联的采购商品 采购价 / 库存数量</h4>
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="channel-name">采购商品名称</th>
+                                            <th>采购商品ID</th>
+                                            <th>采购价（元）</th>
+                                            <th>剩余库存</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="channel-name red">他美Apatmil 奶粉1段</td>
+                                            <td>AA001 / 杭州仓</td>
+                                            <td>100.00</td>
+                                            <td>25</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="easyDialog_wrapper" id="aa" style="display: none">
+            <div class="easyDialog_content">
+                <h4 id="easyDialogTitle" class="easyDialog_title" style="cursor: move;"><a id="closeBtn" class="close_btn" title="关闭窗口" href="javascript:void(0)">×</a>相同编码组商品</h4>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>商品名称</th>
+                        <th class="pro-type">规格</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td class="pro-type">红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td class="pro-type">红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td class="pro-type">红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    <tr>
+                        <td>森宿 曲子 2016春装新款 文艺素色小V领棉麻连衣裙</td>
+                        <td class="pro-type">红色/S</td>
+                        <td><button class="btn btn-warning btn-sm" type="button">脱离规格组</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div  class="easyDialog_wrapper" id="bb" style="display: none">
+            <div class="easyDialog_content">
+                <h4 class="easyDialog_title" style="cursor: move;"><a class="close_btn" title="关闭窗口" href="javascript:void(0)">×</a>提示</h4>
+                <div class="look2-content">
+                    规格组编码作用：<br/>
+                    因创建商品时，商品只允许添加一个规格，通过把规格组编码设置为相同的方式，把商品的多个规格呈现在一个商品详情页。
+                    只要各商品的规格组编码一致，就能在同一个商品详情页展示。
+                </div>
+            </div>
+        </div>
+
+        <div class="prompt" id="cc" style="display: none">
+            <div class="mainbody ac">
+                <a class="close_btn" title="关闭窗口" href="javascript:;">×</a>
+                <div class="txt">
+                    <i class="zzticon icon-l warning"></i>修改成功，保存商品后生效！
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/jquery.js"></script>
+        <script src="../js/zzt.js"></script>
+        <script type="text/javascript" src="../js/easydialog.js"></script>
+        <script type="text/javascript">
+            $(".look1").click(function(){
+                easyDialog.open({
+                    container :"aa" ,
+                    follow : 'look1',
+                    followX : -177,
+                    followY : 24
+                });
+            });
+            $(".look2").click(function(){
+                easyDialog.open({
+                    container :"bb" ,
+                    follow : 'look2',
+                    followX : -107,
+                    followY : 24
+                });
+            })
+            $(".close_btn,.easyDialogNoBtn").click(function(){
+                easyDialog.close();
+            })
+            $(".encoded-edit .btn-success").click(function(){
+                easyDialog.open({
+                    container : 'cc',
+                    fixed : true
+                });
+            })
+        </script>
+</body>
+</html>

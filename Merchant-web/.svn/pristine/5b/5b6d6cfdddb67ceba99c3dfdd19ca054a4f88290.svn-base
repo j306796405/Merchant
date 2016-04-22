@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>ZZT MCT Button</title>
+    <link href="../css/mine.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+    <!--头部内容-->
+    <div class="header whitebg clearfix">
+        <a href="#" class="logo"></a>
+        <div class="top-nav fr"><em class="user"></em> <a href="#">it@zzt.tm</a><a href="#" class="quit">安全退出</a></div>
+    </div>
+
+    <!--左侧内容-->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li class="sub-menu"><a href="#"><i class="icon-home"></i><span>首页</span></a></li>
+
+            <li class="sub-menu active">
+                <a href="javascript:;"><span class="arrow open"></span><i class="icon-commodity"></i><span>商品</span></a>
+                <ul class="sub" style="display: block">
+                    <li class="active"><a href="#">商品列表</a></li>
+                    <li><a href="#">入库商品</a></li>
+                    <li><a href="#">发布商品</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><span class="arrow"></span><i class="icon-order"></i><span>订单</span></a>
+                <ul class="sub">
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                    <li><a href="#">订单列表</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-billing"></i><span>结算</span></a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;"><i class="icon-news"></i><span>消息</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--右侧主体内容-->
+    <div class="main-content">
+        <div class="main-wrapper">
+            <div class="wrapper">
+               <h1 class="review-title">商品审核记录</h1>
+                <div class="whitebg pd20 mt20">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>审核类型</th>
+                            <th>操作员</th>
+                            <th>申请时间</th>
+                            <th>审核时间</th>
+                            <th>结果</th>
+                            <th>原因</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>上架</td>
+                            <td>张三</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>上架通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>上架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>下架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架不通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>下架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架不通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>上架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架不通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>上架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架不通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>上架</td>
+                            <td>老王</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>2016-10-10 22:59:59</td>
+                            <td>下架不通过</td>
+                            <td class="reason">东西都发错。不是第一次，已经是第二次了，亲购物地址选县城时，为什么直辖区县呢？不懂，我付款了但是不知道能不能收到货？</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="page-container">
+                        <ul class="pagination">
+                            <li><a href="#">«</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/zzt.js"></script>
+</body>
+</html>

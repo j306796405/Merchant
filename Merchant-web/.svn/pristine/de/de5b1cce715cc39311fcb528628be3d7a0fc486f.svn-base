@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import "btn.scss";
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 头部样式 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.container{
+  .header{
+    position: fixed; left: 0; right: 0; z-index: 1002; border: 0;/* box-shadow: 0 0 5px rgba(0,0,0,.2);*/ @include boxshadow( 0 0 5px rgba(0,0,0,.2))
+  }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 左侧菜单样式 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+//左侧菜单样式
+.sidebar {
+  width: 190px;  height: 100%; position: fixed; left: 0; background: #2a3542; overflow: hidden;
+  .sidebar-menu {
+    margin-top: 120px;
+    .sub-menu{
+      margin: 0 15px 3px; line-height: 20px !important; background: #35404d; @include borderRadius(4px); font-size: 14px;
+      a {
+        display: block; color: #8b9199; text-decoration: none; padding: 15px 0 15px 10px; outline: none; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;
+        .arrow {
+          border-bottom: 4px solid transparent; border-left: 4px solid #A0A0A0; border-top: 4px solid transparent; float: right; height: 0; margin-right: 10px; margin-top: 6px; width: 0; display: inline-block;
+        }
+        .open {
+          float: right;  margin-top: 8px; margin-right: 10px; border-top: 5px solid #fff; border-left: 4px solid transparent; border-right: 4px solid transparent;
+        }
+        &:after{
+          content:"."; height:0; visibility:hidden; display:block; clear:both; font-size:0; line-height:0
+        }
+      }
+      i{
+        display: inline-block; vertical-align: middle; width: 16px; height: 16px; background-repeat: no-repeat; background-image: url("../img/sprite/sidemenu.png"); margin-right: 10px;
+      }
+      &.active,&.open{
+        span{
+          color: $white;
+        }
+        //icon图标选中样式
+        .icon-home{
+          background-position: -21px 0;
+        }
+        .icon-commodity{
+          background-position: -21px -18px;
+        }
+        .icon-order{
+          background-position: -21px -36px;
+        }
+        .icon-billing{
+          background-position: -21px -54px;
+        }
+        .icon-user{
+          background-position: -21px -72px;
+        }
+        .icon-news{
+          background-position: -21px -90px;
+        }
+      }
+      //iocn图标默认样式
+      .icon-home{
+        background-position: 0 0;
+      }
+      .icon-commodity{
+        background-position: 0 -18px;
+      }
+      .icon-order{
+        background-position: 0 -36px;
+      }
+      .icon-billing{
+        background-position: 0 -54px;
+      }
+      .icon-user{
+        background-position: 0 -72px;
+      }
+      .icon-news{
+        background-position: 0 -90px;
+      }
+    }
+    //二级菜单
+    .sub{
+      margin: -2px 0 0; padding: 0; display: none;
+      li{
+        background: #35404D; margin-bottom: 0; margin-left: 0; margin-right: 0;
+        &:last-child{
+          border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px;
+        }
+        a{
+          font-size: 12px; padding: 0 0 0 32px; line-height: 35px; height: 35px; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; color: #737B83;
+        }
+        &:hover,&.active {
+          a{
+            color:$white; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 右侧内容样式 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+//右侧内容样式
+.main-content {
+  margin-left: 190px;
+}
+.main-wrapper{
+  padding: 15px;
+}
+.wrapper {
+  display: inline-block;  padding-top: 100px; width: 100%;
+}
+.mainpanel{
+  padding: 30px;
+  .base-userinfo{
+    width: 560px;
+    .table{
+      td,th{
+        font-size: 14px; color: #8b9199; text-align: left;
+      }
+      th{
+        text-align: right;
+      }
+    }
+  }
+}

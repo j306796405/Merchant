@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+//颜色
+$default:#666;
+$fontcolor:#ff4a75;
+$white:#fff;
+$green:#78cd51;
+$grey:#999;
+$red:#ff766c;
+$bordercolor:#e2e2e4;
+
+//表格元素背景
+$tablebg:#f1f2f7;
+
+//喆兔主题颜色
+$zztcolor:#ff4a75;
+
+//警告颜色
+$warning:#fcf8e3;
+$warningfont:#c19853;
+
+//成功颜色
+$success:#dff0d8;
+$successfont:#468847;
+
+//危险颜色
+$danger:#f2dede;
+$dangerfont:#b95764;
+
+//弹出信息颜色
+$info:#d9edf7;
+$infofont:#4393ba;
+
+.red{
+  color:$zztcolor;
+}
+.whitebg{
+  background: $white;
+}
